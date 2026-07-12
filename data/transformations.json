@@ -1,0 +1,13 @@
+{
+  "round_up_metre": {
+    "expression": "ceil(value)"
+  },
+
+  "round_down_metre": {
+    "expression": "floor(value)"
+  },
+
+  "minimum": {
+    "expression": "max(value, limit)"
+  }
+}

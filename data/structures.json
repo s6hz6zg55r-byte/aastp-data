@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0",
+
+  "metadata": {
+        "standard": "AASTP-1",
+        "edition": "Edition D Version 1",
+        "chapter": "Chapter 1",
+        "dataType": "Structures",
+        "version": "1.0.0",
+        "lastUpdated": "2026-07-08"
+  },
+
+  "structures": [
+    {
+      "id": "STR001",
+      "code": "ECM",
+      "name": "Earth Covered Magazine",
+      "category": "explosives_facility",
+      "supportedProperties": {
+        "protectionLevel": true,
+        "headwall": false,
+        "barricaded": false,
+        "roofType": false,
+        "aperture": false
+      },
+      "supportedExposure": false
+    },
+
+    {
+      "id": "STR002",
+      "code": "HWM",
+      "name": "Heavy Walled Magazine",
+      "category": "explosives_facility",
+      "supportedProperties": {
+        "protectionLevel": false,
+        "headwall": false,
+        "barricaded": false,
+        "roofType": true,
+        "aperture": true
+      },
+      "supportedExposure": false
+    },
+
+    {
+      "id": "STR003",
+      "code": "MWM",
+      "name": "Medium Walled Magazine",
+      "category": "explosives_facility",
+      "supportedProperties": {
+        "protectionLevel": false,
+        "headwall": false,
+        "barricaded": true,
+        "roofType": false,
+        "aperture": false
+      },
+      "supportedExposure": false
+    },
+    
+    {
+      "id": "STR004",
+      "code": "OS",
+      "name": "Open Stack",
+      "category": "explosives_facility",
+      "supportedProperties": {
+        "protectionLevel": false,
+        "headwall": false,
+        "barricaded": true,
+        "roofType": false,
+        "aperture": false
+      },
+      "supportedExposure": false
+    },
+
+    {
+      "id": "STR005",
+      "code": "EW",
+      "name": "Explosives Workshop",
+      "category": "personnel_facility",
+      "supportedProperties": {
+        "protectionLevel": false,
+        "headwall": false,
+        "barricaded": true,
+        "roofType": true,
+        "aperture": false
+      },
+      "supportedExposure": false
+    },
+    
+    {
+      "id": "STR006",
+      "code": "ROAD",
+      "name": "Road, Railway, Waterway or Public Right of Way",
+      "category": "transport_route",
+      "supportedProperties": false,
+      "supportedExposure": {
+        "category": true,
+        "level": true
+      }
+    },
+
+    {
+      "id": "STR007",
+      "code": "IB",
+      "name": "Inhabited Building",
+      "category": "personnel_facility",
+      "supportedProperties": false,
+      "supportedExposure": false
+    },
+
+    {
+      "id": "STR008",
+      "code": "VC",
+      "name": "Vulnerable Construction",
+      "category": "vulnerable_structure",
+      "supportedProperties": false,
+      "supportedExposure": false
+    },
+
+    {
+      "id": "STR009",
+      "code": "SPT",
+      "name": "Support Staff Office",
+      "category": "personnel_facility",
+      "supportedProperties": false,
+      "supportedExposure": {
+        "category": true,
+        "level": true
+      }
+    },
+
+    {
+      "id": "STR010",
+      "code": "OPG",
+      "name": "Overhead Power Grid",
+      "category": "utility",
+      "supportedProperties": false,
+      "supportedExposure": {
+        "category": true,
+        "level": true
+      }
+    },
+
+    {
+      "id": "STR011",
+      "code": "POL",
+      "name": "POL Facilities inc. Pipelines",
+      "category": "infrastructure",
+      "supportedProperties": {
+        "protectionLevel": false,
+        "headwall": false,
+        "barricaded": false,
+        "roofType": true,
+        "aperture": false
+      },
+      "supportedExposure": {
+        "category": true,
+        "level": true
+      }
+    }
+  ]
+}

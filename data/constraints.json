@@ -1,0 +1,48 @@
+{
+    "schemaVersion": "1.0",
+
+    "metadata": {
+        "standard": "AASTP-1",
+        "edition": "Edition C Version 1",
+        "chapter": "Chapter 1",
+        "dataType": "Constraints",
+        "version": "1.0.0",
+        "lastUpdated": "2026-07-08"
+    },
+
+    "constraints": [
+        {
+            "id": "CV001",
+            "code": "PRI",
+            "category": "manditory",
+            "name": "Primary Explosives Restriction",
+            "text": "No primary explosives.",
+            "source": {
+                "document": "AASTP-1",
+                "note": "Para 1.3.3.5"
+            }
+        },
+        {
+            "id": "CV002",
+            "code": "SPA",
+            "category": "manditory",
+            "name": "Spall Vulnerability Restriction",
+            "text": "No items vulnerable to spall.",
+            "source": {
+                "document": "AASTP-1",
+                "note": "Para 1.3.5.3"
+            }
+        },
+        {
+            "id": "CV003",
+            "code": "LOB",
+            "category": "advisory",
+            "name": "Lobbed Ammunition Consideration",
+            "text": "Effect of lobbed ammunition.",
+            "source": {
+                "document": "AASTP-1",
+                "note": "Para 1.3.5.6"
+            }
+        }
+    ]
+}

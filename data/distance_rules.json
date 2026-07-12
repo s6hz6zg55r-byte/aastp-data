@@ -1,0 +1,2108 @@
+{
+  "schemaVersion": "1.0",
+
+  "distanceRules": {
+    "BD01": {
+        "id": "BD01",
+        "name": "Blast Distance 1",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 120000
+        },
+        "source": {
+            "document": "AASTP-1",
+            "version": "Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD1"
+            }
+        },
+        "calculation": {
+            "type": "conditional",
+            "branches": [
+                {
+                    "id": "BD01_A",
+                    "sequence":1,
+                    "notes": "k=0.35 for NEQ less than 30000",
+                    "when": {
+                        "neq": {
+                            "gte": 1,
+                            "lt": 30000
+                        }
+                    },
+                    "formula": "cube_root",
+                    "parameters":{
+                        "coefficient":0.35
+                    }
+                },
+                {
+                    "id": "BD01_B",
+                    "sequence":2,
+                    "notes": "k=0.44 for NEQ greater than 30000 and less than 120000",
+                    "when": {
+                        "neq":{
+                            "gte": 30000,
+                            "lte": 120000 
+                        }
+                    },
+                    "formula": "cube_root",
+                    "parameters":{
+                        "coefficient":0.44
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD02": {
+        "id": "BD02",
+        "name": "Blast Distance 2",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source": {
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD2"
+            }
+        },
+        "calculation": {
+            "type":"conditional",
+            "branches": [
+                {
+                    "id":"BD02_A",
+                    "sequence":1,
+                    "notes":"k=0.4 for NEQ less than 1500",
+                    "when":{
+                        "neq": {
+                            "gte": 1,
+                            "lt": 1500
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":0.4
+                    }
+                },
+                {
+                    "id":"BD02_B",
+                    "sequence":2,
+                    "notes":"k=0.6 for NEQ greater than 1500 and less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte": 1500,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":0.6
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD03": {
+        "id":"BD03",
+        "name":"Blast Distance 3",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD3"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD03_A",
+                    "sequence":1,
+                    "notes":"k=0.5 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":0.5
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD04": {
+        "id": "BD04",
+        "name":"Blast Distance 4",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD4"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD04_A",
+                    "sequence":1,
+                    "notes":"k=0.8 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":0.8
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD05": {
+        "id": "BD05",
+        "name":"Blast Distance 5",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD5"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD05_A",
+                    "sequence":1,
+                    "notes":"k=1.1 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":1.1
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD06": {
+        "id": "BD06",
+        "name":"Blast Distance 6",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD6"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD06_A",
+                    "sequence":1,
+                    "notes":"k=1.2 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":1.2
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD07": {
+        "id": "BD07",
+        "name":"Blast Distance 7",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD7"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD07_A",
+                    "sequence":1,
+                    "notes":"k=1.8 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":1.8
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },    
+    "BD08": {
+        "id": "BD08",
+        "name":"Blast Distance 8",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD8"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD08_A",
+                    "sequence":1,
+                    "notes":"k=2.0 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":2.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD09": {
+        "id": "BD09",
+        "name":"Blast Distance 9",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD9"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD09_A",
+                    "sequence":1,
+                    "notes":"k=2.4 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":2.4
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD10": {
+        "id": "BD10",
+        "name":"Blast Distance 10",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD10"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD10_A",
+                    "sequence":1,
+                    "notes":"k=3.2 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":3.2
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD11": {
+        "id": "BD11",
+        "name":"Blast Distance 11",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD11"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD11_A",
+                    "sequence":1,
+                    "notes":"k=3.6 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":3.6
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD12": {
+        "id": "BD12",
+        "name":"Blast Distance 12",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD12"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD12_A",
+                    "sequence":1,
+                    "notes":"k=4.0 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":4.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD13": {
+        "id": "BD13",
+        "name":"Blast Distance 13",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD13"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD13_A",
+                    "sequence":1,
+                    "notes":"k=4.4 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":4.4
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD14": {
+        "id": "BD14",
+        "name":"Blast Distance 14",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD14"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD14_A",
+                    "sequence":1,
+                    "notes":"k=4.8 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":4.8
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD15": {
+        "id": "BD15",
+        "name":"Blast Distance 15",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD15"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD15_A",
+                    "sequence":1,
+                    "notes":"k=6.0 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":6.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD16": {
+        "id": "BD16",
+        "name":"Blast Distance 16",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 45000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD16"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD16_A",
+                    "sequence":1,
+                    "notes":"k=0.47 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":0.47
+                    }
+                },
+                {
+                    "id":"BD16_B",
+                    "sequence":2,
+                    "notes":"k=1.73 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":1.73
+                    }
+                },
+                {
+                    "id":"BD16_C",
+                    "sequence":3,
+                    "notes":"k=7.0 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":45000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":7.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD17": {
+        "id": "BD17",
+        "name":"Blast Distance 17",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD17"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD17_A",
+                    "sequence":1,
+                    "notes":"k=7.2 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":7.2
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD18": {
+        "id": "BD18",
+        "name":"Blast Distance 18",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD18"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD18_A",
+                    "sequence":1,
+                    "notes":"k=8.0 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":8.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD19": {
+        "id": "BD19",
+        "name":"Blast Distance 19",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 45000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD19"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD19_A",
+                    "sequence":1,
+                    "notes":"k=0.61 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":0.61
+                    }
+                },
+                {
+                    "id":"BD19_B",
+                    "sequence":2,
+                    "notes":"k=2.23 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":2.23
+                    }
+                },
+                {
+                    "id":"BD19_C",
+                    "sequence":3,
+                    "notes":"k=9.0 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":45000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":9.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD20": {
+        "id": "BD20",
+        "name":"Blast Distance 20",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 45000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD20"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD20_A",
+                    "sequence":1,
+                    "notes":"k=0.63 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":0.63
+                    }
+                },
+                {
+                    "id":"BD20_B",
+                    "sequence":2,
+                    "notes":"k=2.30 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":2.30
+                    }
+                },
+                {
+                    "id":"BD20_C",
+                    "sequence":3,
+                    "notes":"k=9.3 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":45000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":9.3
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD21": {
+        "id": "BD21",
+        "name":"Blast Distance 21",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD21"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD21_A",
+                    "sequence":1,
+                    "notes":"k=9.6 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":9.6
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD22": {
+        "id": "BD22",
+        "name":"Blast Distance 22",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD22"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD22_A",
+                    "sequence":1,
+                    "notes":"k=0.75 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":0.75
+                    }
+                },
+                {
+                    "id":"BD22_B",
+                    "sequence":2,
+                    "notes":"k=2.75 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":2.75
+                    }
+                },
+                {
+                    "id":"BD22_C",
+                    "sequence":3,
+                    "notes":"k=11.1 for NEQ more than 4500 but less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":11.1
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD23": {
+        "id": "BD23",
+        "name":"Blast Distance 23",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 45000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD23"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD23_A",
+                    "sequence":1,
+                    "notes":"k=0.81 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":0.81
+                    }
+                },
+                {
+                    "id":"BD23_B",
+                    "sequence":2,
+                    "notes":"k=2.97 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":2.97
+                    }
+                },
+                {
+                    "id":"BD23_C",
+                    "sequence":3,
+                    "notes":"k=12.0 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":45000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":12.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD24": {
+        "id": "BD24",
+        "name":"Blast Distance 24",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD24"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD24_A",
+                    "sequence":1,
+                    "notes":"k=13.0 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":13.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD25": {
+        "id": "BD25",
+        "name":"Blast Distance 25",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 45000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD25"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD25_A",
+                    "sequence":1,
+                    "notes":"k=0.95 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":0.95
+                    }
+                },
+                {
+                    "id":"BD25_B",
+                    "sequence":2,
+                    "notes":"k=3.47 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":3.47
+                    }
+                },
+                {
+                    "id":"BD25_C",
+                    "sequence":3,
+                    "notes":"k=14.0 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":45000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":14.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD26": {
+        "id": "BD26",
+        "name":"Blast Distance 26",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD26"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD26_A",
+                    "sequence":1,
+                    "notes":"k=1.00 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":1.0
+                    }
+                },
+                {
+                    "id":"BD26_B",
+                    "sequence":2,
+                    "notes":"k=3.6 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":3.6
+                    }
+                },
+                {
+                    "id":"BD26_C",
+                    "sequence":3,
+                    "notes":"k=14.8 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":14.8
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD27": {
+        "id": "BD27",
+        "name":"Blast Distance 27",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD27"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD27_A",
+                    "sequence":1,
+                    "notes":"k=16.0 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":16.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD28": {
+        "id": "BD28",
+        "name":"Blast Distance 28",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 45000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD28"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD28_A",
+                    "sequence":1,
+                    "notes":"k=1.22 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":1.22
+                    }
+                },
+                {
+                    "id":"BD28_B",
+                    "sequence":2,
+                    "notes":"k=4.46 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":4.46
+                    }
+                },
+                {
+                    "id":"BD28_C",
+                    "sequence":3,
+                    "notes":"k=18.0 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":45000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":18.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD29": {
+        "id": "BD29",
+        "name":"Blast Distance 29",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD29"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD29_A",
+                    "sequence":1,
+                    "notes":"k=20.0 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":20.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD30": {
+        "id": "BD30",
+        "name":"Blast Distance 30",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD30"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD30_A",
+                    "sequence":1,
+                    "notes":"k=22.2 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":22.2
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD31": {
+        "id": "BD31",
+        "name":"Blast Distance 31",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD31"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD31_A",
+                    "sequence":1,
+                    "notes":"k=1.5 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":1.5
+                    }
+                },
+                {
+                    "id":"BD31_B",
+                    "sequence":2,
+                    "notes":"k=5.5 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":5.5
+                    }
+                },
+                {
+                    "id":"BD31_C",
+                    "sequence":3,
+                    "notes":"k=22.2 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":22.2
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD32": {
+        "id": "BD32",
+        "name":"Blast Distance 32",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD32"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD32_A",
+                    "sequence":1,
+                    "notes":"k=25.0 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":25.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD33": {
+        "id": "BD33",
+        "name":"Blast Distance 33",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 45000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD33"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD33_A",
+                    "sequence":1,
+                    "notes":"k=1.89 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":1.89
+                    }
+                },
+                {
+                    "id":"BD33_B",
+                    "sequence":2,
+                    "notes":"k=6.94 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":6.94
+                    }
+                },
+                {
+                    "id":"BD33_C",
+                    "sequence":3,
+                    "notes":"k=36.0 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":45000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":36.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD34": {
+        "id": "BD34",
+        "name":"Blast Distance 34",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 45000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD34"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD34_A",
+                    "sequence":1,
+                    "notes":"k=2.43 for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"cube_root_squared",
+                    "parameters":{
+                        "coefficient":2.43
+                    }
+                },
+                {
+                    "id":"BD34_B",
+                    "sequence":2,
+                    "notes":"k=8.92 for NEQ more than 2500 but less than 4500",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":4500
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":8.92
+                    }
+                },
+                {
+                    "id":"BD34_C",
+                    "sequence":3,
+                    "notes":"k=36.0 for NEQ more than 4500 but less than 45000",
+                    "when":{
+                        "neq":{
+                            "gte":4500,
+                            "lte":45000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":36.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "BD35": {
+        "id": "BD35",
+        "name":"Blast Distance 35",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": "BD35"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"BD35_A",
+                    "sequence":1,
+                    "notes":"k=44.4 for NEQ less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":44.4
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "FD10": {
+        "id": "FD10",
+        "name":"Fixed Distance 10",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed C, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 5,
+                "Row": ""
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"FD10_A",
+                    "sequence":1,
+                    "notes":"Fixed distance of 10m",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"constant_distance",
+                    "parameters":{
+                        "coefficient":10.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "FD25": {
+        "id": "FD25",
+        "name":"Fixed Distance 25",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed D, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 4,
+                "Row": ""
+            }
+        },
+        "calculation":{
+            "type":"fixed",
+            "branches":[
+                {
+                    "id":"FD25_A",
+                    "sequence":1,
+                    "notes":"Fixed distance of 25m",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "formula":"constant_distance",
+                    "parameters":{
+                        "coefficient":25.0
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+
+    "TD01": {
+        "id": "TD01",
+        "name":"Thermal Distance 1",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed D, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 9,
+                "Row": "TD1"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"TD01_A",
+                    "sequence":1,
+                    "notes":"Fixed distance of 25m for NEQ less than 12000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":12000
+                        }
+                    },
+                    "formula":"constant_distance",
+                    "parameters":{
+                        "coefficient":25.0
+                    }
+                },
+                {
+                    "id":"TD01_B",
+                    "sequence":2,
+                    "notes":"k=0.22 for NEQ more than 12000 but less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":12000,
+                            "lt":500000
+                        }
+                    },
+                    "formula":"square_root",
+                    "parameters":{
+                        "coefficient":0.22
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "TD02": {
+        "id": "TD02",
+        "name":"Thermal Distance 2",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed D, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 9,
+                "Row": "TD2"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"TD02_A",
+                    "sequence":1,
+                    "notes":"Fixed distance of 60m for NEQ less than 6000",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":6000
+                        }
+                    },
+                    "formula":"constant_distance",
+                    "parameters":{
+                        "coefficient":60.0
+                    }
+                },
+                {
+                    "id":"TD02_B",
+                    "sequence":2,
+                    "notes":"k=3.2 for NEQ more than 6000 but less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":6000,
+                            "lt":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":3.2
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    }
+  },
+  "TD03": {
+        "id": "TD03",
+        "name":"Thermal Distance 3",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed D, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 9,
+                "Row": "TD3"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"TD03_A",
+                    "sequence":1,
+                    "notes":"Fixed distance of 60m for NEQ less than 2500",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":2500
+                        }
+                    },
+                    "formula":"constant_distance",
+                    "parameters":{
+                        "coefficient":60.0
+                    }
+                },
+                {
+                    "id":"TD03_B",
+                    "sequence":2,
+                    "notes":"k=4.3 for NEQ more than 2500 but less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":2500,
+                            "lt":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":4.3
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    "TD04": {
+        "id": "TD04",
+        "name":"Thermal Distance 4",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "source":{
+            "document":"AASTP-1",
+            "version":"Ed D, Ver 1",
+            "reference": {
+                "Part": 1,
+                "Section": "II",
+                "Table": 9,
+                "Row": "TD4"
+            }
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"TD04_A",
+                    "sequence":1,
+                    "notes":"Fixed distance of 60m for NEQ less than 800",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":800
+                        }
+                    },
+                    "formula":"constant_distance",
+                    "parameters":{
+                        "coefficient":60.0
+                    }
+                },
+                {
+                    "id":"TD04_B",
+                    "sequence":2,
+                    "notes":"k=6.4 for NEQ more than 6000 but less than 500000",
+                    "when":{
+                        "neq":{
+                            "gte":800,
+                            "lt":500000
+                        }
+                    },
+                    "formula":"cube_root",
+                    "parameters":{
+                        "coefficient":6.4
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    }
+}

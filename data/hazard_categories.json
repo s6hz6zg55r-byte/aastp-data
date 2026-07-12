@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0",
+
+  
+  "metadata": {
+    "standard": "AASTP-1",
+    "edition": "Edition D Version 1",
+    "chapter": "Chapter 1",
+    "dataType": "Hazard Divisions",
+    "version": "1.0.0",
+    "lastUpdated": "2026-07-08"
+  },
+
+  "hazardDivisions": [
+    {
+      "id": "HD001",
+      "code": "1.1",
+      "name": "Mass Explosion Hazard",
+      "description": "Substances and articles which have a mass explosion hazard.",
+      "parentDivision": "1.1",
+      "type": "hazard_division",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.2.1"
+      },
+      "effects": [
+        "EFF001",
+        "EFF002",
+        "EFF003"
+      ],
+      "supportedQuantityBasis": [ "NEQ" ]
+    },
+
+    {
+      "id": "HD002",
+      "code": "1.2.1",
+      "name": "Fragment Producing Hazard",
+      "description": "Explosive substances and articles which have a projection hazard producing dangerous fragments.",
+      "parentDivision": "1.2",
+      "type": "storage_subdivision",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.2.2"
+      },
+      "effects": [
+        "EFF002"
+      ],
+      "supportedQuantityBasis": [ "NEQ", "MCE" ]
+    },
+
+    {
+      "id": "HD003",
+      "code": "1.2.2",
+      "name": "Fragment Producing Hazard",
+      "description": "Explosive substances and articles which have a projection hazard without significant blast effects.",
+      "parentDivision":"1.2",
+      "type":"storage_subdivision",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.2"
+      },
+      "effects": [
+        "EFF002"
+      ],
+      "supportedQuantityBasis": [ "NEQ" ]
+    },
+
+    {
+      "id": "HD004",
+      "code": "1.2.3",
+      "name": "Fragment Producing Hazard",
+      "description": "Explosive substances and articles which have a projection hazard with limited fragment range.",
+      "parentDivision":"1.2",
+      "type":"storage_subdivision",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.2"
+      },
+      "effects": [
+        "EFF002"
+      ],
+      "supportedQuantityBasis": [ "NEQ", "MCE" ]
+    },
+
+    {
+      "id": "HD005",
+      "code": "1.3.1",
+      "name": "Propellant Explosive",
+      "description": "More hazardous HD 1.3 propellant explosives which present a significant mass fire hazard and intense thermal radiation.",
+      "parentDivision": "1.3",
+      "type":"storage_subdivision",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.3"
+      },
+      "effects": [
+        "EFF004",
+        "EFF005"
+      ],
+      "supportedQuantityBasis": [ "NEQ" ]
+    },
+
+    {
+      "id": "HD006",
+      "code": "1.3.2",
+      "name": "Non-Propellant HD 1.3 Items",
+      "description": "Less hazardous HD 1.3 items and substances which present a fire hazard but are not classified as propellant explosives.",
+      "parentDivision": "1.3",
+      "type":"storage_subdivision",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.3"
+      },
+      "effects": [
+        "EFF004",
+        "EFF005"
+      ],
+      "supportedQuantityBasis": [ "NEQ" ]
+    },
+
+    {
+      "id": "HD007",
+      "code": "1.4",
+      "name": "Minor Explosion Hazard",
+      "description": "Substances and articles which present no significant hazard beyond the package.",
+      "parentDivision": "1.4",
+      "type":"hazard_division",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.4"
+      },
+      "effects": [
+        "EFF006"
+      ],
+      "supportedQuantityBasis": [ "NEQ" ]
+    },
+
+    {
+      "id": "HD008",
+      "code": "1.5",
+      "name": "Very Insensitive Mass Explosion Hazard",
+      "description": "Very insensitive substances having a mass explosion hazard.",
+      "parentDivision": "1.5",
+      "type":"hazard_division",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.5"
+      },
+      "effects": [
+        "EFF001",
+        "EFF002",
+        "EFF003"
+      ],
+      "supportedQuantityBasis": [ "NEQ" ]
+    },
+
+    {
+      "id": "HD009",
+      "code": "1.6",
+      "name": "Extremely Insensitive Articles",
+      "description": "Extremely insensitive articles which do not have a mass explosion hazard.",
+      "parentDivision": "1.6",
+      "type":"hazard_division",
+      "source": {
+        "document": "AASTP-1",
+        "paragraph": "1.2.1.2"
+      },
+      "effects": [
+        "EFF006"
+      ],
+      "supportedQuantityBasis": [ "NEQ", "MCE" ]
+    }
+  ]
+}

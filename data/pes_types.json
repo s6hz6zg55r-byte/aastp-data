@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0",
+
+  "metadata": {
+        "standard": "AASTP-1",
+        "edition": "Edition C Version 1",
+        "chapter": "Chapter 1",
+        "dataType": "PES Types",
+        "version": "1.0.0",
+        "lastUpdated": "2026-07-08"
+    },
+
+  "pes_types": [
+
+    {
+        "id": "PES001",
+        "code": "ECM",
+        "name": "Earth Covered Magazine",
+        "structure": "STR001",
+        "construction": null,
+        "notes": "",
+        "source": {
+            "document": "AASTP-1",
+            "note": ""
+        }
+    },
+
+    {
+        "id": "PES002A",
+        "code": "HWM-P",
+        "name": "Heavy Walled Magazine - Protective Roof",
+        "structure": "STR002",
+        "construction": {
+            "aperture": false,
+            "barricaded": null,
+            "roofType": "Protective"
+        },
+        "notes": "",
+        "source": {
+            "document": "AASTP-1",
+            "note": ""
+        }
+    },
+
+    {
+        "id": "PES002B",
+        "code": "HWM-A",
+        "name": "Heavy Walled Magazine - Aperture",
+        "structure": "STR002",
+        "construction": {
+            "aperture": true,
+            "barricaded": null,
+            "roofType": "Protective"
+        },
+        "notes": "",
+        "source": {
+            "document": "AASTP-1",
+            "note": ""
+        }
+    },
+
+    {
+        "id": "PES002C",
+        "code": "HWM-L",
+        "name": "Heavy Walled Magazine - Light Roof",
+        "structure": "STR002",
+        "construction": {
+            "aperture": null,
+            "barricaded": null,
+            "roofType": "Light"
+        },
+        "notes": "",
+        "source": {
+            "document": "AASTP-1",
+            "note": ""
+        }
+    },
+
+    {
+        "id": "PES003A",
+        "code": "MWM-B",
+        "name": "Medium Walled Magazine - Barricaded",
+        "structure": "STR003",
+        "construction": {
+            "aperture": null,
+            "barricaded": true,
+            "roofType": null
+        },
+        "notes": "",
+        "source": {
+            "document": "AASTP-1",
+            "note": ""
+        }
+    },
+
+    {
+        "id": "PES003B",
+        "code": "MWM",
+        "name": "Medium Walled Magazine",
+        "structure": "STR003",
+        "construction": {
+            "aperture": null,
+            "barricaded": false,
+            "roofType": null
+        },
+        "notes": "",
+        "source": {
+            "document": "AASTP-1",
+            "note": ""
+        }
+    },
+
+    {
+        "id": "PES004A",
+        "code": "OS-B",
+        "name": "Light Structure or Open Stack - Barricaded",
+        "structure": "STR004",
+        "construction": {
+            "aperture": null,
+            "barricaded": true,
+            "roofType": null
+        },
+        "notes": "",
+        "source": {
+            "document": "AASTP-1",
+            "note": ""
+        }
+    },
+
+    {
+        "id": "PES004B",
+        "code": "OS",
+        "name": "Light Structure or Open Stack",
+        "structure": "STR004",
+        "construction": {
+            "aperture": null,
+            "barricaded": false,
+            "roofType": null
+        },
+        "notes": "",
+        "source": {
+            "document": "AASTP-1",
+            "note": ""
+        }
+    }
+  ]
+}

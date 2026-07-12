@@ -1,0 +1,45 @@
+{
+    "schemaVersion": "1.0",
+
+    "metadata": {
+        "standard": "AASTP-1",
+        "edition": "Edition C Version 1",
+        "chapter": "Chapter 1",
+        "dataType": "Protection Levels",
+        "version": "1.0.0",
+        "lastUpdated": "2026-07-08"
+    },
+
+    "protection_levels": [
+        {
+            "id": "PL001",
+            "code": "VCP",
+            "name": "Virtually Complete Protection",
+            "notes": "",
+            "source": {
+                "document": "AASTP-1",
+                "note": ""
+            }
+        },
+        {
+            "id": "PL002",
+            "code": "HDP",
+            "name": "High Degree of Protection",
+            "notes": "",
+            "source": {
+                "document": "AASTP-1",
+                "note": ""
+            }
+        },
+        {
+            "id": "PL003",
+            "code": "LDP",
+            "name": "Limited Degree of Protection",
+            "notes": "",
+            "source": {
+                "document": "AASTP-1",
+                "note": ""
+            }
+        }
+    ]
+}
