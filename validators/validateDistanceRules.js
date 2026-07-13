@@ -1,6 +1,7 @@
 // validators/validateDistanceRules.js
 
 const fs = require("fs");
+
 const stats = {
     rules: 0,
     branches: 0,
@@ -8,18 +9,15 @@ const stats = {
     warnings: 0
 };
 
+const formulas = JSON.parse(fs.readFileSync("./data/formulas.json","utf8"));
+
 const {
     validateId,
     validateRange,
     validateSource
 } = require("./utils");
 
-const VALID_FORMULAS = [
-    "cube_root",
-    "cube_root_squared",
-    "square_root",
-    "constant_distance"
-];
+const VALID_FORMULAS = new Set(formulas.formulas.map(formula => formula.id));
 
 const VALID_TRANSFORMATIONS = [
     "round_up_metre"
