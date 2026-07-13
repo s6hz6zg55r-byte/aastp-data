@@ -1,18 +1,25 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.0.0",
   
   "metadata": {
+    "dataset": "formulas",
+    "title": "Formulas",
+    "description": "This dataset contains formulas used for explosive quantity-distance calculations.",
+    "version": "1.0.0",
+    "source": {
       "standard": "AASTP-1",
       "edition": "Edition D Version 1",
       "chapter": "Chapter 1",
       "dataType": "Structures",
-      "version": "1.0.0",
       "lastUpdated": "2026-07-11"
+    }
   },
 
-  "formulas": {
+  "formulas": [
 
-    "cube_root": {
+    {
+      "id": "FORM001",
+      "code": "CUBE_ROOT",
       "name": "Cube Root Distance Formula",
       "description": "Standard explosive quantity-distance relationship.",
       "solvable": true,
@@ -28,7 +35,9 @@
       "reverseExpression": "pow(distance/coefficient, 3.0)"
     },
 
-    "cube_root_squared": {
+    {
+      "id": "FORM002",
+      "code": "CUBE_ROOT_SQUARED",
       "name": "Cube Root Squared Formula",
       "description": "Used for certain fragment and hazard calculations.",
       "solvable": true,
@@ -44,7 +53,9 @@
       "reverseExpression": "pow(distance/coefficient, 1.5)"
     },
 
-    "square_root": {
+    {
+      "id": "FORM003",
+      "code": "SQUARE_ROOT",
       "name": "Square Root Formula",
       "description": "Used where distance scales with square root of NEQ.",
       "solvable": true,
@@ -60,17 +71,21 @@
       "reverseExpression": "pow(distance/coefficient, 2.0)"
     },
 
-    "constant_distance": {
+    {
+      "id": "FORM004",
+      "code": "CONSTANT_DISTANCE",
       "name": "Constant Distance",
       "description": "Fixed distance independent of NEQ.",
       "solvable": false,
       "units": {
+        "input": "m",
         "output": "m"
       },
-      "parameters": [
-        "distance"
-      ],
+      "parameters": {
+        "input": "distance",
+        "output": "distance"
+      },
       "forwardExpression": "distance"
     }
-  }
+  ]
 }
