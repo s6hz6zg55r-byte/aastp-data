@@ -75,6 +75,33 @@ function validateSource(source, context, errors) {
     }
 }
 
+//
+function validateTraceability(
+    traceability,
+    context,
+    errors
+) {
+
+    if (!traceability) {
+        addError(errors,`${context}: missing traceability`);
+        return;
+    }
+
+    const required = [
+        "Part",
+        "Section",
+        "Table",
+        "Row"
+    ];
+
+    for (const field of required) {
+
+        if (typeof traceability[field] !== "string") {
+            addError(errors,`${context}: traceability.${field} must be a string`);
+        }
+    }
+}
+
 // Validate that the hazard source has the required fields
 function validateHazardSource(source, context, errors) {
 
@@ -103,6 +130,9 @@ function validateHazardSource(source, context, errors) {
         );
     }
 }
+
+
+
 
 function isNonEmptyString(value) {
     return (
@@ -163,6 +193,7 @@ module.exports = {
     validateId,
     validateRange,
     validateSource,
+    validateTraceability,
     validateHazardSource,
     isNonEmptyString,
     buildIdSet,

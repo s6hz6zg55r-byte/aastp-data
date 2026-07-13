@@ -4,10 +4,16 @@
   "description": "",
   "main": "validateDistanceRules.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "validate:formulas-schema": "node validators/validateFormulasSchema.js",
+    "validate:distance-rules-schema": "node validators/validateDistanceRulesSchema.js",
+    "validate:es-types-schema": "node validators/validateEsTypesSchema.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  }
 }

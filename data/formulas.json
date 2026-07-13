@@ -5,7 +5,7 @@
     "dataset": "formulas",
     "title": "Formulas",
     "description": "This dataset contains formulas used for explosive quantity-distance calculations.",
-    "version": "1.0.0",
+    "version": "0.5.0",
     "source": {
       "standard": "AASTP-1",
       "edition": "Edition D Version 1",

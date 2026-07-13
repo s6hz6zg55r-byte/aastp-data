@@ -1,14 +1,19 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "0.5.0",
 
   "metadata": {
-        "standard": "AASTP-1",
-        "edition": "Edition D Version 1",
-        "chapter": "Chapter 1",
-        "dataType": "Structures",
-        "version": "1.0.0",
-        "lastUpdated": "2026-07-08"
-  },
+        "dataset": "structures",
+        "title": "Structures",
+        "description": "This dataset contains definitions for various structure types and their properties.",
+        "version": "0.5.0",
+        "source": {
+            "standard": "AASTP-1",
+            "edition": "Edition D Version 1",
+            "chapter": "Chapter 1",
+            "dataType": "Structures",
+            "lastUpdated": "2026-07-13"
+        }
+    },
 
   "structures": [
     {
@@ -18,8 +23,8 @@
       "category": "explosives_facility",
       "supportedProperties": {
         "protectionLevel": true,
-        "headwall": false,
-        "barricaded": false,
+        "headwall": true,
+        "barricaded": true,
         "roofType": false,
         "aperture": false
       },

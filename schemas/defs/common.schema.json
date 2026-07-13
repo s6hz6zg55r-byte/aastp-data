@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://aastp.org/schemas/defs/common.schema.json",
+
+
+  "title": "AASTP Common Schema Definitions",
+
+  "$defs": {
+
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+
+    "metadata": {
+      "type": "object",
+
+      "required": [
+        "dataset",
+        "title",
+        "description",
+        "version",
+        "source"
+      ],
+
+      "properties": {
+
+        "dataset": {
+          "type": "string"
+        },
+
+        "title": {
+          "type": "string"
+        },
+
+        "description": {
+          "type": "string"
+        },
+
+        "version": {
+          "$ref": "#/$defs/version"
+        },
+
+        "source": {
+          "$ref": "#/$defs/source"
+        }
+      },
+
+      "additionalProperties": false
+    },
+
+    "source": {
+      "type": "object",
+
+      "required": [
+        "standard",
+        "edition",
+        "chapter",
+        "dataType",
+        "lastUpdated"
+      ],
+
+      "properties": {
+
+        "standard": {
+          "type": "string"
+        },
+
+        "edition": {
+          "type": "string"
+        },
+
+        "chapter": {
+          "type": "string"
+        },
+
+        "dataType": {
+          "type": "string"
+        },
+
+        "lastUpdated": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+
+      "additionalProperties": false
+    },
+
+    "traceability": {
+      "type": "object",
+
+      "required": [
+        "Part",
+        "Section",
+        "Table",
+        "Row"
+      ],
+
+      "properties": {
+
+        "Part": {
+          "type": "string"
+        },
+
+        "Section": {
+          "type": "string"
+        },
+
+        "Table": {
+          "type": "string"
+        },
+
+        "Row": {
+          "type": "string"
+        }
+      },
+
+      "additionalProperties": false
+    },
+
+    "formulaId": {
+      "type": "string",
+      "pattern": "^FORM[0-9]{3}$"
+    },
+
+    "distanceRuleId": {
+      "type": "string",
+      "pattern": "^[A-Z]{2,3}[0-9]{2,3}$"
+    },
+
+    "applicability": {
+        "type": "object",
+        "required": [
+            "minNEQ",
+            "maxNEQ"
+        ],
+        "properties": {
+            "minNEQ": {
+            "type": "number",
+            "minimum": 0
+        },
+        "maxNEQ": {
+            "type": "number",
+            "exclusiveMinimum": 0
+            }
+        },
+        "additionalProperties": false
+    },
+
+    "namedEntity": {
+        "type": "object",
+        "required": [
+            "id",
+            "name",
+            "description"
+        ],
+        "properties": {
+            "id": {"type": "string"},
+            "name": {"type": "string"},
+            "description": {"type": "string"}
+        },
+        "additionalProperties": false
+    },
+
+    "recordSource": {
+        "type": "object",
+        "required": [
+            "document",
+            "note"
+        ],
+        "properties": {
+            "document": {
+            "type": "string"
+            },
+            "note": {"type": "string"}
+        },
+        "additionalProperties": false
+    },
+
+    "structureId": {
+        "type": "string",
+        "pattern": "^STR[0-9]{3}$"
+    },
+
+    "esTypeId": {
+        "type": "string",
+        "pattern": "^ES[0-9]{3}[A-Z]?$"
+    },
+
+    "branchCondition": {
+        "type": "object",
+        "required": ["neq"],
+        "properties": {
+            "neq": {
+                "type": "object",
+                "properties": {
+                    "gte": { "type": "number" },
+                    "gt": { "type": "number" },
+                    "lte": { "type": "number" },
+                    "lt": { "type": "number" }
+                },
+                "additionalProperties": false
+            }
+        },
+        "additionalProperties": false
+    },
+
+    "genericId": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

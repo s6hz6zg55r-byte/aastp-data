@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://aastp.org/schemas/formulas.schema.json",
+
+  "title": "AASTP Formula Definitions",
+
+  "type": "object",
+
+  "required": [
+    "schemaVersion",
+    "metadata",
+    "formulas"
+  ],
+
+  "properties": {
+
+    "schemaVersion": {
+      "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/schemaVersion"
+    },
+
+    "metadata": {
+      "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/metadata"
+    },
+
+    "formulas": {
+      "type": "array",
+
+      "minItems": 1,
+
+      "items": {
+        "type": "object",
+
+        "required": [
+          "id",
+          "code",
+          "name",
+          "description",
+          "solvable",
+          "units",
+          "parameters",
+          "forwardExpression"
+        ],
+
+        "properties": {
+
+          "id": {
+            "$ref": "./defs/common.schema.json#/$defs/formulaId"
+          },
+
+          "code": {
+            "type": "string",
+            "pattern": "^[A-Z0-9_]+$"
+          },
+
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+
+          "solvable": {
+            "type": "boolean"
+          },
+
+          "units": {
+            "type": "object",
+
+            "required": [
+              "input",
+              "output"
+            ],
+
+            "properties": {
+
+              "input": {
+                "type": "string"
+              },
+
+              "output": {
+                "type": "string"
+              }
+            },
+
+            "additionalProperties": false
+          },
+
+          "parameters": {
+            "type": "object",
+
+            "required": [
+              "input",
+              "output"
+            ],
+
+            "properties": {
+
+              "input": {
+                "type": "string"
+              },
+
+              "output": {
+                "type": "string"
+              }
+            },
+
+            "additionalProperties": false
+          },
+
+          "forwardExpression": {
+            "type": "string",
+            "minLength": 1
+          },
+
+          "reverseExpression": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+
+        "additionalProperties": false
+      }
+    }
+  },
+
+  "additionalProperties": false
+}
