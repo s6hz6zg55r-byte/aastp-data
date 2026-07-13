@@ -1,5 +1,14 @@
 {
   "schemaVersion": "1.0",
+  
+  "metadata": {
+      "standard": "AASTP-1",
+      "edition": "Edition D Version 1",
+      "chapter": "Chapter 1",
+      "dataType": "Structures",
+      "version": "1.0.0",
+      "lastUpdated": "2026-07-13"
+  },
 
   "distanceRules": {
     "BD01": {
@@ -1879,7 +1888,6 @@
             "round_up_metre"
         ]
     },
-
     "TD01": {
         "id": "TD01",
         "name":"Thermal Distance 1",
@@ -1991,9 +1999,8 @@
         "transformations": [
             "round_up_metre"
         ]
-    }
-  },
-  "TD03": {
+    },  
+    "TD03": {
         "id": "TD03",
         "name":"Thermal Distance 3",
         "applicability":{
@@ -2105,4 +2112,5 @@
             "round_up_metre"
         ]
     }
+  }
 }

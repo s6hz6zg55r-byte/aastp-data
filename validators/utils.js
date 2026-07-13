@@ -58,16 +58,20 @@ function validateSource(source, context, errors) {
 
     const ref = source.reference;
 
-    if (ref.Part === undefined) {
-        addError(errors, `${context}: missing source.reference.Part`);
+    if (typeof ref !== "object") {
+        addError(errors,`${context}: source.reference must be an object`);
+    return;
+    }
+    if (ref.Part !== undefined && typeof ref.Part !== "string") {
+        addError(errors,`${context}: source.reference.Part must be a string`);
     }
 
-    if (ref.Section === undefined) {
-        addError(errors, `${context}: missing source.reference.Section`);
+    if (ref.Section !== undefined && typeof ref.Section !== "string") {
+        addError(errors,`${context}: source.reference.Section must be a string`);
     }
 
-    if (ref.Table === undefined) {
-        addError(errors, `${context}: missing source.reference.Table`);
+    if (ref.Table !== undefined && typeof ref.Table !== "string") {
+        addError(errors,`${context}: source.reference.Table must be a string`);
     }
 }
 
@@ -107,8 +111,50 @@ function isNonEmptyString(value) {
     );
 }
 
+// Build a set of IDs from a collection of objects or an object with keys
 function buildIdSet(collection) {
-    return new Set(Object.keys(collection));
+    if (Array.isArray(collection)) {
+        return new Set(
+            collection.map(item => item.id)
+        );
+    }
+    return new Set(
+        Object.keys(collection)
+    );
+}
+
+function validateUniqueIds(collection, entityName, errors) {
+    const seen = new Set();
+    for (const item of collection) {
+        if (seen.has(item.id)) {
+            errors.push(
+                `${entityName}: duplicate id '${item.id}'`
+            );
+        } else {
+            seen.add(item.id);
+        }
+    }
+}
+
+function validateUniqueProperty(collection, property, entityName, errors) {
+
+    const seen = new Map();
+    for (const item of collection) {
+        const value = item[property];
+        if (value === undefined || value === null) {
+            continue;
+        }
+        if (seen.has(value)) {
+            errors.push(
+                `${entityName}: duplicate ${property} '${value}' in '${seen.get(value)}' and '${item.id}'`
+            );
+        } else {
+            seen.set(
+                value,
+                item.id
+            );
+        }
+    }
 }
 
 module.exports = {
@@ -119,5 +165,7 @@ module.exports = {
     validateSource,
     validateHazardSource,
     isNonEmptyString,
-    buildIdSet
+    buildIdSet,
+    validateUniqueIds,
+    validateUniqueProperty
 };

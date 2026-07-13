@@ -3,7 +3,7 @@
   
   "metadata": {
     "standard": "AASTP-1",
-    "edition": "Edition C Version 1",
+    "edition": "Edition D Version 1",
     "chapter": "Chapter 1",
     "dataType": "Effects",
     "version": "1.0.0"
@@ -16,11 +16,15 @@
       "code": "BLAST",
       "name": "Blast",
       "description": "Blast overpressure effects",
-      "category": "physical_effect",
+      "category": "blast_effect",
       "requiresQD": true,
       "active": true,
       "source": {
         "document": "AASTP-1",
+        "version": "Edition D Version 1",
+        "reference": {
+          "section": "Section I"
+        },
         "note": "Digital abstraction derived from hazard classifications and QD methodology."
       }
     },
@@ -35,6 +39,10 @@
       "active": true,
       "source": {
         "document": "AASTP-1",
+        "version": "Edition D Version 1",
+        "reference": {
+          "section": "Section I"
+        },
         "note": "Digital abstraction derived from hazard classifications and QD methodology."
       }
     },
@@ -49,6 +57,10 @@
       "active": true,
       "source": {
         "document": "AASTP-1",
+        "version": "Edition D Version 1",
+        "reference": {
+          "section": "Section I"
+        },
         "note": "Digital abstraction derived from hazard classifications and QD methodology."
       }
     },
@@ -63,6 +75,10 @@
       "active": true,
       "source": {
         "document": "AASTP-1",
+        "version": "Edition D Version 1",
+        "reference": {
+          "section": "Section I"
+        },
         "note": "Digital abstraction derived from hazard classifications and QD methodology."
       }
     },
@@ -77,6 +93,10 @@
       "active": true,
       "source": {
         "document": "AASTP-1",
+        "version": "Edition D Version 1",
+        "reference": {
+          "section": "Section I"
+        },
         "note": "Digital abstraction derived from hazard classifications and QD methodology."
       }
     },
@@ -91,6 +111,10 @@
       "active": true,
       "source": {
         "document": "AASTP-1",
+        "version": "Edition D Version 1",
+        "reference": {
+          "section": "Section I"
+        },
         "note": "Digital abstraction derived from hazard classifications and QD methodology."
       }
     }
