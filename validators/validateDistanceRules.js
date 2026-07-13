@@ -1,15 +1,12 @@
 // validators/validateDistanceRules.js
 
 const fs = require("fs");
-
 const stats = {
     rules: 0,
     branches: 0,
     errors: 0,
     warnings: 0
 };
-
-const formulas = JSON.parse(fs.readFileSync("./data/formulas.json","utf8"));
 
 const {
     validateId,
