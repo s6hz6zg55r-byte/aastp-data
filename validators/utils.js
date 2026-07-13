@@ -107,6 +107,10 @@ function isNonEmptyString(value) {
     );
 }
 
+function buildIdSet(collection) {
+    return new Set(Object.keys(collection));
+}
+
 module.exports = {
     addError,
     addWarning,
@@ -114,5 +118,6 @@ module.exports = {
     validateRange,
     validateSource,
     validateHazardSource,
-    isNonEmptyString
+    isNonEmptyString,
+    buildIdSet
 };
