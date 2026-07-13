@@ -71,6 +71,35 @@ function validateSource(source, context, errors) {
     }
 }
 
+// Validate that the hazard source has the required fields
+function validateHazardSource(source, context, errors) {
+
+    if (!source) {
+        errors.push(
+            `${context}: missing source block`
+        );
+        return;
+    }
+
+    if (
+        typeof source.document !== "string" ||
+        source.document.trim() === ""
+    ) {
+        errors.push(
+            `${context}: missing source.document`
+        );
+    }
+
+    if (
+        typeof source.paragraph !== "string" ||
+        source.paragraph.trim() === ""
+    ) {
+        errors.push(
+            `${context}: missing source.paragraph`
+        );
+    }
+}
+
 function isNonEmptyString(value) {
     return (
         typeof value === "string" &&

@@ -17,7 +17,7 @@
       "code": "1.1",
       "name": "Mass Explosion Hazard",
       "description": "Substances and articles which have a mass explosion hazard.",
-      "parentDivision": "1.1",
+      "parentDivision": null,
       "type": "hazard_division",
       "source": {
         "document": "AASTP-1",
@@ -123,7 +123,7 @@
       "code": "1.4",
       "name": "Minor Explosion Hazard",
       "description": "Substances and articles which present no significant hazard beyond the package.",
-      "parentDivision": "1.4",
+      "parentDivision": null,
       "type":"hazard_division",
       "source": {
         "document": "AASTP-1",
@@ -140,7 +140,7 @@
       "code": "1.5",
       "name": "Very Insensitive Mass Explosion Hazard",
       "description": "Very insensitive substances having a mass explosion hazard.",
-      "parentDivision": "1.5",
+      "parentDivision": null,
       "type":"hazard_division",
       "source": {
         "document": "AASTP-1",
@@ -159,7 +159,7 @@
       "code": "1.6",
       "name": "Extremely Insensitive Articles",
       "description": "Extremely insensitive articles which do not have a mass explosion hazard.",
-      "parentDivision": "1.6",
+      "parentDivision": null,
       "type":"hazard_division",
       "source": {
         "document": "AASTP-1",
