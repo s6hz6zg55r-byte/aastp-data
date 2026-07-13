@@ -1,13 +1,18 @@
 {
-    "schemaVersion": "1.0",
+    "schemaVersion": "1.0.0",
 
     "metadata": {
-        "standard": "AASTP-1",
-        "edition": "Edition C Version 1",
-        "chapter": "Chapter 1",
-        "dataType": "Protection Levels",
+        "dataset": "protection_levels",
+        "title": "Protection Levels",
+        "description": "This dataset contains information about various protection levels associated with interaction rules.",
         "version": "1.0.0",
-        "lastUpdated": "2026-07-08"
+        "source": {
+            "standard": "AASTP-1",
+            "edition": "Edition D Version 1",
+            "chapter": "Chapter 1",
+            "dataType": "Protection Levels",
+            "lastUpdated": "2026-07-13"
+        }
     },
 
     "protection_levels": [

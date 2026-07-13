@@ -1,15 +1,19 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.0.0",
 
-  
   "metadata": {
-    "standard": "AASTP-1",
-    "edition": "Edition D Version 1",
-    "chapter": "Chapter 1",
-    "dataType": "Hazard Divisions",
-    "version": "1.0.0",
-    "lastUpdated": "2026-07-08"
-  },
+        "dataset": "hazard_categories",
+        "title": "Hazard Categories",
+        "description": "This dataset contains information about various hazard categories associated with explosive events.",
+        "version": "0.5.0",
+        "source": {
+            "standard": "AASTP-1",
+            "edition": "Edition D Version 1",
+            "chapter": "Chapter 1",
+            "dataType": "Hazard Categories",
+            "lastUpdated": "2026-07-13"
+        }
+    },
 
   "hazardDivisions": [
     {

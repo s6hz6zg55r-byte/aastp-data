@@ -1,13 +1,18 @@
 {
-    "schemaVersion": "1.0",
+    "schemaVersion": "1.0.0",
 
     "metadata": {
-        "standard": "AASTP-1",
-        "edition": "Edition D Version 1",
-        "chapter": "Chapter 1",
-        "dataType": "Structures",
-        "version": "1.0.0",
-        "lastUpdated": "2026-07-11"
+        "dataset": "interaction_rules",
+        "title": "Interaction Rules",
+        "description": "This dataset contains information about various interaction rules used to calculate QDs and distances.",
+        "version": "0.5.0",
+        "source": {
+            "standard": "AASTP-1",
+            "edition": "Edition D Version 1",
+            "chapter": "Chapter 1",
+            "dataType": "Interaction Rules",
+            "lastUpdated": "2026-07-13"
+        }
     },
 
     "interactionRules": {
