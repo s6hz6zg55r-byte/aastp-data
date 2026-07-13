@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://aastp.org/schemas/distance_rules.schema.json",
+
+  "title": "AASTP Distance Rules",
+
+  "type": "object",
+
+  "required": [
+    "schemaVersion",
+    "metadata",
+    "distanceRules"
+  ],
+
+  "properties": {
+
+    "schemaVersion": {
+      "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/schemaVersion"
+    },
+
+    "metadata": {
+      "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/metadata"
+    },
+
+    "distanceRules": {
+
+        "type": "array",
+
+        "items": {
+
+            "type": "object",
+
+            "required": [
+                "id",
+                "name",
+                "applicability",
+                "traceability",
+                "calculation",
+                "transformations"
+            ],
+
+            "properties": {
+                "id": {
+                    "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/distanceRuleId"
+                },
+
+                "name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+
+                "applicability": {
+                    "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/applicability"
+                },      
+                "traceability": {
+                    "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/traceability"
+                },
+                "calculation": {
+                    "type": "object",
+                    "required": [
+                        "type",
+                        "branches"
+                    ],
+                    "properties": {
+                        "type": {
+                            "enum": [
+                                "conditional",
+                                "fixed"
+                            ]
+                        },
+                        "branches": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "id",
+                                    "sequence",
+                                    "notes",
+                                    "when",
+                                    "formula",
+                                    "parameters"
+                                ],
+                                "properties": {
+                                    "id": {"type": "string"},
+                                    "sequence": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "notes": {"type": "string"},
+                                    "when": {
+                                        "type": "object",
+                                        "required": ["neq"],
+                                        "properties": {
+                                            "neq": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "gte": {"type": "number"},
+                                                    "gt": {"type": "number"},
+                                                    "lte": {"type": "number"},
+                                                    "lt": {"type": "number"}
+                                                },
+                                                "additionalProperties": false
+                                            }
+                                        },
+                                        "additionalProperties": false
+                                    },
+                                    "formula": {
+                                        "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/formulaId"
+                                    },
+                                    "parameters": {
+                                        "type": "object",
+                                        "required": ["coefficient"],
+                                        "properties": {
+                                            "coefficient": {"type": "number"}
+                                        }
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                },
+                "transformations": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+  },
+  "additionalProperties": false
+}

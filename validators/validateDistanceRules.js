@@ -11,10 +11,13 @@ const stats = {
 
 const formulas = JSON.parse(fs.readFileSync("./data/formulas.json","utf8"));
 
+
+
 const {
     validateId,
     validateRange,
-    validateSource
+    validateSource,
+    validateTraceability
 } = require("./utils");
 
 const VALID_FORMULAS = new Set(formulas.formulas.map(formula => formula.id));
@@ -36,6 +39,8 @@ function validateDistanceRules(filePath) {
         fs.readFileSync(filePath, "utf8")
     );
 
+    const distanceRules = data.distanceRules;
+
     const rules = data.distanceRules;
 
     if (!rules) {
@@ -43,7 +48,7 @@ function validateDistanceRules(filePath) {
         return { errors, warnings };
     }
 
-    for (const [key, rule] of Object.entries(rules)) {
+    for (const rule of distanceRules) {
         stats.rules++;
 
         const branchCount =
@@ -51,7 +56,7 @@ function validateDistanceRules(filePath) {
 
         stats.branches += branchCount;
 
-        validateRuleKey(key, rule, errors);
+        //validateRuleKey(key, rule, errors);
 
         validateRequiredFields(rule, errors);
 
@@ -70,9 +75,6 @@ function validateDistanceRules(filePath) {
         stats
     };
 }
-function validateRuleKey(key, rule, errors) {
-    validateId( key, rule.id, `Rule ${key}`, errors );
-}
 
 // Validate that all required fields are present in the rule
 function validateRequiredFields(rule, errors) {
@@ -81,7 +83,7 @@ function validateRequiredFields(rule, errors) {
         "id",
         "name",
         "applicability",
-        "source",
+        "traceability",
         "calculation"
     ];
     for (const field of required) {
@@ -93,15 +95,19 @@ function validateRequiredFields(rule, errors) {
         }
     }
 
-    validateSource(
-        rule.source,
+    validateTraceability(
+        rule.traceability,
         `Rule ${rule.id}`,
         errors
     );
 }
 function validateApplicability(rule, errors) {
     const app = rule.applicability;
-    if (!app) return;
+    
+    if (!app) {
+        errors.push(`${rule.id}: missing applicability`);
+        return;
+    }
 
     if (app.minNEQ == null) {
         errors.push(
