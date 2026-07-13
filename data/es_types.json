@@ -1,13 +1,18 @@
 {
-    "schemaVersion": "1.0",
+    "schemaVersion": "1.0.0",
 
     "metadata": {
-        "standard": "AASTP-1",
-        "edition": "Edition C Version 1",
-        "chapter": "Chapter 1",
-        "dataType": "ES Types",
-        "version": "1.0.0",
-        "lastUpdated": "2026-07-08"
+        "dataset": "es_types",
+        "title": "ES Types",
+        "description": "This dataset contains exposure site structures and infrastructure used for explosive quantity-distance calculations.",
+        "version": "0.5.0",
+        "source": {
+            "standard": "AASTP-1",
+            "edition": "Edition D Version 1",
+            "chapter": "Chapter 1",
+            "dataType": "Structures",
+            "lastUpdated": "2026-07-13"
+        }
     },
 
     "es_types": [

@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://aastp.org/schemas/es_types.schema.json",
+
+  "title": "AASTP ES Types",
+
+  "type": "object",
+
+  "required": [
+    "schemaVersion",
+    "metadata",
+    "es_types"
+  ],
+
+  "properties": {
+
+    "schemaVersion": {
+      "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/schemaVersion"
+    },
+
+    "metadata": {
+      "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/metadata"
+    },
+
+    "es_types": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "object",
+
+        "required": [
+          "id",
+          "code",
+          "name",
+          "structure",
+          "construction",
+          "exposure",
+          "notes",
+          "source"
+        ],
+
+        "properties": {
+
+          "id": {
+            "type": "string",
+            "pattern": "^ES[0-9]{3}[A-Z]?$"
+          },
+
+          "code": {
+            "type": "string",
+            "minLength": 1
+          },
+
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+
+          "structure": {
+            "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/structureId"
+          },
+
+          "construction": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+
+                "required": [
+                  "protectionLevel",
+                  "headwall",
+                  "barricaded",
+                  "roofType"
+                ],
+
+                "properties": {
+
+                  "protectionLevel": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+
+                  "headwall": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+
+                  "barricaded": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+
+                  "roofType": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+
+                "additionalProperties": false
+              }
+            ]
+          },
+
+          "exposure": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+
+                "required": [
+                  "category",
+                  "level"
+                ],
+
+                "properties": {
+
+                  "category": {
+                    "enum": [
+                      "traffic_density",
+                      "occupancy",
+                      "criticality"
+                    ]
+                  },
+
+                  "level": {
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+
+                "additionalProperties": false
+              }
+            ]
+          },
+
+          "notes": {
+            "type": "string"
+          },
+
+          "source": {
+
+            "type": "object",
+
+            "required": [
+              "document",
+              "note"
+            ],
+
+            "properties": {
+
+              "document": {
+                "type": "string"
+              },
+
+              "note": {
+                "type": "string"
+              }
+            },
+
+            "additionalProperties": false
+          }
+        },
+
+        "additionalProperties": false
+      }
+    }
+  },
+
+  "additionalProperties": false
+}
