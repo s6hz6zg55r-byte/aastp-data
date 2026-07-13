@@ -97,7 +97,7 @@ function validateRequiredFields(rule, errors) {
 
     validateSource(
         rule.source,
-        `Rule ${key}`,
+        `Rule ${rule.id}`,
         errors
     );
 }
