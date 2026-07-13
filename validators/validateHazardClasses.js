@@ -3,6 +3,7 @@ const fs = require("fs");
 const {
     validateId,
     validateSource,
+    validateHazardSource,
     isNonEmptyString
 } = require("./utils");
 
@@ -147,11 +148,13 @@ function validateHazardDivision(
         );
     }
 
-    validateSource(
+    validateHazardSource(
         hazard.source,
         `Hazard ${hazard.id}`,
         errors
     );
+
+
 
     validateQuantityBasis(
         hazard,
@@ -220,26 +223,53 @@ function validateEffectsArray(
 
 function validateParentDivision(
     hazard,
-    warnings
+    errors
 ) {
 
-    const topLevelCodes = [
-        "1.1",
-        "1.2",
-        "1.3",
-        "1.4",
-        "1.5",
-        "1.6"
-    ];
+    const expected =
+        expectedParent(hazard.code);
 
     if (
-        topLevelCodes.includes(hazard.code) &&
-        hazard.parentDivision === hazard.code
+        hazard.type === "hazard_division" &&
+        expected !== null
     ) {
-        warnings.push(
-            `${hazard.id}: parentDivision equals own code - consider using null for top-level divisions`
+
+        errors.push(
+            `${hazard.id}: hazard_division should not have subdivision code '${hazard.code}'`
         );
     }
+
+    if (
+        hazard.type === "storage_subdivision" &&
+        expected === null
+    ) {
+
+        errors.push(
+            `${hazard.id}: storage_subdivision must have a parent division`
+        );
+    }
+
+    if (
+        hazard.parentDivision !== expected
+    ) {
+
+        errors.push(
+            `${hazard.id}: expected parentDivision '${expected}' but found '${hazard.parentDivision}'`
+        );
+    }
+}
+
+function expectedParent(code) {
+
+    const parts = code.split(".");
+
+    // Top-level divisions
+    if (parts.length === 2) {
+        return null;
+    }
+
+    // Storage subdivisions
+    return `${parts[0]}.${parts[1]}`;
 }
 
 const filePath =

@@ -113,5 +113,6 @@ module.exports = {
     validateId,
     validateRange,
     validateSource,
+    validateHazardSource,
     isNonEmptyString
 };
