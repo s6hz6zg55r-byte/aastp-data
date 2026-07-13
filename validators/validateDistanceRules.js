@@ -8,15 +8,27 @@ const stats = {
     warnings: 0
 };
 
+const {
+    validateId,
+    validateRange,
+    validateSource
+} = require("./utils");
+
 const VALID_FORMULAS = [
     "cube_root",
     "cube_root_squared",
-    "square_root"
+    "square_root",
+    "constant_distance"
 ];
 
 const VALID_TRANSFORMATIONS = [
     "round_up_metre"
 ];
+
+const VALID_CALCULATION_TYPES = [
+    "conditional",
+    "fixed"
+]
 
 function validateDistanceRules(filePath) {
     const errors = [];
@@ -61,12 +73,7 @@ function validateDistanceRules(filePath) {
     };
 }
 function validateRuleKey(key, rule, errors) {
-
-    if (key !== rule.id) {
-        errors.push(
-            `${key}: key does not match rule.id (${rule.id})`
-        );
-    }
+    validateId( key, rule.id, `Rule ${key}`, errors );
 }
 function validateRequiredFields(rule, errors) {
 
@@ -115,7 +122,7 @@ function validateApplicability(rule, errors) {
 function validateCalculation(rule, errors) {
     const calc = rule.calculation;
     if (!calc) return;
-    if (calc.type !== "conditional") {
+    if (!VALID_CALCULATION_TYPES.includes(calc.type)) {
         errors.push(
             `${rule.id}: unsupported calculation type '${calc.type}'`
         );
@@ -373,14 +380,18 @@ function validateBranchCoverage(rule, errors){
     }
 }
 
+// Validate the source block of each rule
+validateSource(
+    rule.source,
+    `Rule ${key}`,
+    errors
+);
 
 const filePath =
     process.argv[2] ??
-    "./distance_rules.json";
+    "./data/distance_rules.json";
 
-const result = validateDistanceRules(
-    "./distance_rules.json"
-);
+const result = validateDistanceRules(filePath);
 
 console.log("\nDistance Rules Validation\n");
 
