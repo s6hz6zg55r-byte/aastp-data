@@ -1,6 +1,6 @@
 // validators/validateDistanceRules.js
 
-import fs from "fs";
+const fs = require("fs");
 const stats = {
     rules: 0,
     branches: 0,
@@ -75,6 +75,8 @@ function validateDistanceRules(filePath) {
 function validateRuleKey(key, rule, errors) {
     validateId( key, rule.id, `Rule ${key}`, errors );
 }
+
+// Validate that all required fields are present in the rule
 function validateRequiredFields(rule, errors) {
 
     const required = [
@@ -92,6 +94,12 @@ function validateRequiredFields(rule, errors) {
             );
         }
     }
+
+    validateSource(
+        rule.source,
+        `Rule ${key}`,
+        errors
+    );
 }
 function validateApplicability(rule, errors) {
     const app = rule.applicability;
@@ -111,11 +119,13 @@ function validateApplicability(rule, errors) {
 
     if (
         app.minNEQ != null &&
-        app.maxNEQ != null &&
-        app.minNEQ >= app.maxNEQ
+        app.maxNEQ != null
     ) {
-        errors.push(
-            `${rule.id}: minNEQ must be less than maxNEQ`
+        validateRange(
+            app.minNEQ,
+            app.maxNEQ,
+            `${rule.id} applicability`,
+            errors
         );
     }
 }
@@ -294,7 +304,7 @@ function validateBranchCoverage(rule, errors){
     const ranges = [];
     const branches = rule.calculation?.branches ?? [];
     // Return if there is only one branch
-    if (branches.length === 0) {
+    if (branches.length <= 1) {
         return;
     }
     for (const branch of rule.calculation.branches) {
@@ -380,12 +390,7 @@ function validateBranchCoverage(rule, errors){
     }
 }
 
-// Validate the source block of each rule
-validateSource(
-    rule.source,
-    `Rule ${key}`,
-    errors
-);
+
 
 const filePath =
     process.argv[2] ??
