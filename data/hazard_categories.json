@@ -9,8 +9,8 @@
         "source": {
             "standard": "AASTP-1",
             "edition": "Edition D Version 1",
-            "chapter": "Chapter 1",
-            "dataType": "Hazard Categories",
+            "chapter": "Part 1, Chapter 2",
+            "paragraph": "Section 1",
             "lastUpdated": "2026-07-13"
         }
     },
@@ -29,8 +29,7 @@
       },
       "effects": [
         "EFF001",
-        "EFF002",
-        "EFF003"
+        "EFF002"
       ],
       "supportedQuantityBasis": [ "NEQ" ]
     },
@@ -44,10 +43,12 @@
       "type": "storage_subdivision",
       "source": {
         "document": "AASTP-1",
-        "paragraph": "1.2.1.2.2"
+        "paragraph": "1.2.1.2.2(b)(1)"
       },
       "effects": [
-        "EFF002"
+        "EFF001",
+        "EFF002",
+        "EFF003"
       ],
       "supportedQuantityBasis": [ "NEQ", "MCE" ]
     },
@@ -61,10 +62,10 @@
       "type":"storage_subdivision",
       "source": {
         "document": "AASTP-1",
-        "paragraph": "1.2.1.2"
+        "paragraph": "1.2.1.2.2(b)(2)"
       },
       "effects": [
-        "EFF002"
+        "EFF003"
       ],
       "supportedQuantityBasis": [ "NEQ" ]
     },
@@ -78,10 +79,12 @@
       "type":"storage_subdivision",
       "source": {
         "document": "AASTP-1",
-        "paragraph": "1.2.1.2"
+        "paragraph": "1.2.1.2.2(c)"
       },
       "effects": [
-        "EFF002"
+        "EFF001",
+        "EFF002",
+        "EFF004"
       ],
       "supportedQuantityBasis": [ "NEQ", "MCE" ]
     },
@@ -95,11 +98,10 @@
       "type":"storage_subdivision",
       "source": {
         "document": "AASTP-1",
-        "paragraph": "1.2.1.3"
+        "paragraph": "Derived from Part 1, Chapter 1, Table 1 and QD framework."
       },
       "effects": [
-        "EFF004",
-        "EFF005"
+        "EFF004"
       ],
       "supportedQuantityBasis": [ "NEQ" ]
     },
@@ -113,11 +115,10 @@
       "type":"storage_subdivision",
       "source": {
         "document": "AASTP-1",
-        "paragraph": "1.2.1.3"
+        "paragraph": "Derived from Part 1, Chapter 1, Table 1 and QD framework."
       },
       "effects": [
-        "EFF004",
-        "EFF005"
+        "EFF004"
       ],
       "supportedQuantityBasis": [ "NEQ" ]
     },
@@ -131,7 +132,7 @@
       "type":"hazard_division",
       "source": {
         "document": "AASTP-1",
-        "paragraph": "1.2.1.4"
+        "paragraph": "1.2.1.1.1(d)"
       },
       "effects": [
         "EFF006"
@@ -148,12 +149,11 @@
       "type":"hazard_division",
       "source": {
         "document": "AASTP-1",
-        "paragraph": "1.2.1.5"
+        "paragraph": "1.2.1.1.1(e)"
       },
       "effects": [
         "EFF001",
-        "EFF002",
-        "EFF003"
+        "EFF002"
       ],
       "supportedQuantityBasis": [ "NEQ" ]
     },
@@ -167,10 +167,12 @@
       "type":"hazard_division",
       "source": {
         "document": "AASTP-1",
-        "paragraph": "1.2.1.2"
+        "paragraph": "1.2.1.1.1(f)"
       },
       "effects": [
-        "EFF006"
+        "EFF001",
+        "EFF002",
+        "EFF004"
       ],
       "supportedQuantityBasis": [ "NEQ", "MCE" ]
     }

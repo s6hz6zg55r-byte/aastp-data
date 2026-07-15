@@ -1,0 +1,123 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://aastp.org/schemas/pes_types.schema.json",
+
+    "title": "PES Types",
+    "description": "Potential Explosion Site type definitions.",
+
+    "type": "object",
+
+    "properties": {
+        "schemaVersion": {
+            "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/schemaVersion"
+        },
+
+        "metadata": {
+            "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/metadata"
+        },
+
+        "pes_types": {
+            "type": "array",
+
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "pattern": "^PES[0-9A-Z]+$"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "structure": {
+                        "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/structureId"
+                    },
+                    "construction": {
+                        "type": [
+                            "object",
+                            "null"
+                        ],
+
+                        "properties": {
+                            "protectionLevel": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+
+                            "headwall": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ]
+                            },
+
+                            "aperture": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ]
+                            },
+
+                            "barricaded": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ]
+                            },
+
+                            "roofType": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        }
+                    },
+
+                    "notes": {
+                        "type": "string"
+                    },
+
+                    "source": {
+                        "type": "object",
+                        "properties": {
+                            "document": {"type": "string"},
+                            "note": {"type": "string"}
+                        },
+
+                        "required": [
+                            "document",
+                            "note"
+                        ],
+
+                        "additionalProperties": false
+                    }
+                },
+                "required": [
+                    "id",
+                    "code",
+                    "name",
+                    "structure",
+                    "construction",
+                    "notes",
+                    "source"
+                ],
+                "additionalProperties": false
+            }           
+        }
+
+    },
+    "required": [
+        "schemaVersion",
+        "metadata",
+        "pes_types"
+    ],
+
+    "additionalProperties": false
+    
+}

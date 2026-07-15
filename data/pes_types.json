@@ -9,8 +9,8 @@
         "source": {
             "standard": "AASTP-1",
             "edition": "Edition D Version 1",
-            "chapter": "Chapter 1",
-            "dataType": "PES Types",
+            "chapter": "Part 1, Chapter 1",
+            "para": "",
             "lastUpdated": "2026-07-13"
         }
     },
@@ -26,7 +26,7 @@
         "notes": "",
         "source": {
             "document": "AASTP-1",
-            "note": ""
+            "note": "Section 1, Anenx 1-A Table 1"
         }
     },
 
@@ -43,7 +43,7 @@
         "notes": "",
         "source": {
             "document": "AASTP-1",
-            "note": ""
+            "note": "Section 1, Anenx 1-A Table 1"
         }
     },
 
@@ -60,7 +60,7 @@
         "notes": "",
         "source": {
             "document": "AASTP-1",
-            "note": ""
+            "note": "Section 1, Anenx 1-A Table 2"
         }
     },
 
@@ -76,7 +76,7 @@
         },
         "notes": "",
         "source": {
-            "document": "AASTP-1",
+            "document": "AASTP-2",
             "note": ""
         }
     },
@@ -94,7 +94,7 @@
         "notes": "",
         "source": {
             "document": "AASTP-1",
-            "note": ""
+            "note": "Section 1, Anenx 1-A Table 3"
         }
     },
 
@@ -111,7 +111,7 @@
         "notes": "",
         "source": {
             "document": "AASTP-1",
-            "note": ""
+            "note": "Section 1, Anenx 1-A Table 3"
         }
     },
 
@@ -128,7 +128,7 @@
         "notes": "",
         "source": {
             "document": "AASTP-1",
-            "note": ""
+            "note": "Section 1, Anenx 1-A Table 4"
         }
     },
 
@@ -145,7 +145,7 @@
         "notes": "",
         "source": {
             "document": "AASTP-1",
-            "note": ""
+            "note": "Section 1, Anenx 1-A Table 1"
         }
     }
   ]

@@ -5,12 +5,12 @@
         "dataset": "protection_levels",
         "title": "Protection Levels",
         "description": "This dataset contains information about various protection levels associated with interaction rules.",
-        "version": "1.0.0",
+        "version": "0.5.0",
         "source": {
             "standard": "AASTP-1",
             "edition": "Edition D Version 1",
-            "chapter": "Chapter 1",
-            "dataType": "Protection Levels",
+            "chapter": "Part 1, Chapter 3",
+            "para": "para 1.3.1.10(2)",
             "lastUpdated": "2026-07-13"
         }
     },
@@ -20,30 +20,30 @@
             "id": "PL001",
             "code": "VCP",
             "name": "Virtually Complete Protection",
-            "notes": "",
+            "notes": "There is virtually complete protection against practically instantanious propagation of explosion by ground shock, blast, flame, and high velocity projections. The stocks are likely to be serviceable.",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "1.3.1.10(2)(a)"
             }
         },
         {
             "id": "PL002",
             "code": "HDP",
             "name": "High Degree of Protection",
-            "notes": "",
+            "notes": "There is a high degree of protection against practically instantaneous propagation of explosion by ground shock, blast, flame, and high velocity projections. Most of the stocks are likely to be servicable.",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "1.3.1.10(2)(b)"
             }
         },
         {
             "id": "PL003",
             "code": "LDP",
             "name": "Limited Degree of Protection",
-            "notes": "",
+            "notes": "There is only a limited degree of protection against practically instantanious propagation of explosion by ground shock, flame, and high velocity projections. The stocks are likely to be heavily damaged and rendered unserviceable.",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "1.3.1.10(2)(c)"
             }
         }
     ]

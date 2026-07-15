@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "0.5.0",
+  "schemaVersion": "1.0.0",
 
   "metadata": {
         "dataset": "structures",
@@ -9,8 +9,8 @@
         "source": {
             "standard": "AASTP-1",
             "edition": "Edition D Version 1",
-            "chapter": "Chapter 1",
-            "dataType": "Structures",
+            "chapter": "Part 1, Chapter 1",
+            "para": "",
             "lastUpdated": "2026-07-13"
         }
     },

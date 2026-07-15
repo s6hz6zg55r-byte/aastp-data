@@ -10,8 +10,8 @@
         "source": {
             "standard": "AASTP-1",
             "edition": "Edition D Version 1",
-            "chapter": "Chapter 1",
-            "dataType": "Transformations",
+            "chapter": "Part 1, Annex 1-A",
+            "para": "Tables 5-9",
             "lastUpdated": "2026-07-13"
         }
     },

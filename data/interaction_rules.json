@@ -9,8 +9,8 @@
         "source": {
             "standard": "AASTP-1",
             "edition": "Edition D Version 1",
-            "chapter": "Chapter 1",
-            "dataType": "Interaction Rules",
+            "chapter": "Part 1, Annex 1-A",
+            "para": "Tables 1-4",
             "lastUpdated": "2026-07-13"
         }
     },
@@ -72,6 +72,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD03",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
@@ -83,6 +116,10 @@
                 ],
                 "EFF004": [
                     {
+                        "hazard": "HD004",
+                        "status": "NO_QD"
+                    },
+                    {
                         "hazard": "HD005",
                         "status": "NO_QD"
                     },
@@ -90,9 +127,12 @@
                     {
                         "hazard": "HD006",
                         "status": "NO_QD"
+                    },
+                    {
+                        "hazard": "HD009",
+                        "status": "NO_QD"
                     }
                 ]
-
             }
 
         },
@@ -125,7 +165,6 @@
                         "protectionLevel": "PL001",
                         "constraints": ["CV001"]
                     },
-
                     {
                         "hazard": "HD002",
                         "distanceRule": "BD03",
@@ -133,7 +172,6 @@
                         "protectionLevel": "PL001",
                         "constraints": ["CV001"]
                     },
-
                     {
                         "hazard": "HD004",
                         "distanceRule": "BD03",
@@ -141,7 +179,6 @@
                         "protectionLevel": "PL001",
                         "constraints": ["CV001"]
                     },
-
                     {
                         "hazard": "HD009",
                         "distanceRule": "BD03",
@@ -152,10 +189,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD03",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
-
                     {
                         "hazard": "HD003",
                         "status": "N_A"
@@ -163,12 +229,19 @@
                 ],
                 "EFF004": [
                     {
+                        "hazard": "HD004",
+                        "status": "NO_QD"
+                    },
+                    {
                         "hazard": "HD005",
                         "status": "NO_QD"
                     },
-
                     {
                         "hazard": "HD006",
+                        "status": "NO_QD"
+                    },
+                    {
+                        "hazard": "HD009",
                         "status": "NO_QD"
                     }
                 ]
@@ -203,7 +276,6 @@
                         "protectionLevel": "PL001",
                         "constraints": ["CV001"]
                     },
-
                     {
                         "hazard": "HD002",
                         "distanceRule": "BD04",
@@ -211,7 +283,6 @@
                         "protectionLevel": "PL001",
                         "constraints": ["CV001"]
                     },
-
                     {
                         "hazard": "HD004",
                         "distanceRule": "BD04",
@@ -219,7 +290,6 @@
                         "protectionLevel": "PL001",
                         "constraints": ["CV001"]
                     },
-
                     {
                         "hazard": "HD009",
                         "distanceRule": "BD04",
@@ -230,10 +300,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD04",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
-
                     {
                         "hazard": "HD003",
                         "status": "N_A"
@@ -325,6 +424,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD03",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
@@ -352,7 +484,6 @@
                         "status":"NO_QD"
                     }                
                 ]
-
             }
 
         },
@@ -411,6 +542,39 @@
                     }
                 ],
                 "EFF002": [
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD03",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
                     {
                         "hazard": "HD002",
                         "status": "N_A"
@@ -497,6 +661,39 @@
                     }
                 ],
                 "EFF002": [
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD05",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel":"PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel":"PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
                     {
                         "hazard": "HD002",
                         "status": "N_A"
@@ -593,6 +790,39 @@
                     }
                 ],
                 "EFF002": [
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD04",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
                     {
                         "hazard": "HD002",
                         "status": "N_A"
@@ -707,6 +937,65 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD05",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD04",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
@@ -792,6 +1081,39 @@
                     }
                 ],
                 "EFF002": [
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD11",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001","CV003"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD11",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001","CV003"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD11",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001","CV003"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD11",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001","CV003"]
+                    }
+                ],
+                "EFF003": [
                     {
                         "hazard": "HD002",
                         "status": "N_A"
@@ -891,6 +1213,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD03",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
@@ -978,6 +1333,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD03",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
@@ -1003,7 +1391,7 @@
                     },
 
                     {
-                        "hazard": "HD007",
+                        "hazard": "HD009",
                         "status": "NO_QD"
                     }
                 ]
@@ -1064,6 +1452,39 @@
                     }
                 ],
                 "EFF002": [
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD04",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD04",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
                     {
                         "hazard": "HD002",
                         "status": "N_A"
@@ -1160,6 +1581,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD03",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
@@ -1247,6 +1701,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD03",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD03",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
@@ -1332,6 +1819,39 @@
                     }
                 ],
                 "EFF002": [
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD05",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel":"PL001",
+                        "constraints": ["CV001"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD05",
+                        "inputBasis": "MCE",
+                        "protectionLevel":"PL001",
+                        "constraints": ["CV001"]
+                    }
+                ],
+                "EFF003": [
                     {
                         "hazard": "HD002",
                         "status": "N_A"
@@ -1429,6 +1949,39 @@
                 ],
                 "EFF002": [
                     {
+                        "hazard": "HD001",
+                        "distanceRule": "BD07",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": []
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD07",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": []
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD07",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": []
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD07",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": []
+                    }
+                ],
+                "EFF003": [
+                    {
                         "hazard": "HD002",
                         "status": "N_A"
                     },
@@ -1513,6 +2066,37 @@
                     }
                 ],
                 "EFF002": [
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD07",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL001",
+                        "constraints": []
+                    },
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD07",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": []
+                    },
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD07",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": []
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD07",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL001",
+                        "constraints": []
+                    }
+                ],
+                "EFF003": [
                     {
                         "hazard": "HD002",
                         "status": "N_A"
@@ -1599,6 +2183,39 @@
                     }
                 ],
                 "EFF002": [
+                    {
+                        "hazard": "HD001",
+                        "distanceRule": "BD11",
+                        "inputBasis": "NEQ",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001","CV003"]
+                    },
+
+                    {
+                        "hazard": "HD002",
+                        "distanceRule": "BD11",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001","CV003"]
+                    },
+
+                    {
+                        "hazard": "HD004",
+                        "distanceRule": "BD11",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001","CV003"]
+                    },
+
+                    {
+                        "hazard": "HD009",
+                        "distanceRule": "BD11",
+                        "inputBasis": "MCE",
+                        "protectionLevel": "PL002",
+                        "constraints": ["CV001","CV003"]
+                    }
+                ],
+                "EFF003": [
                     {
                         "hazard": "HD002",
                         "status": "N_A"

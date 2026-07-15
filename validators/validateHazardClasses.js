@@ -29,11 +29,6 @@ function validateHazardClasses(filePath) {
         errors.push("Missing schemaVersion");
     }
 
-    validateMetadata(
-        data.metadata,
-        errors
-    );
-
     if (!Array.isArray(data.hazardDivisions)) {
         errors.push(
             "hazardDivisions must be an array"
@@ -64,31 +59,6 @@ function validateHazardClasses(filePath) {
         errors,
         warnings
     };
-}
-
-function validateMetadata(metadata, errors) {
-
-    if (!metadata) {
-        errors.push("Missing metadata block");
-        return;
-    }
-
-    const required = [
-        "standard",
-        "edition",
-        "chapter",
-        "dataType",
-        "version"
-    ];
-
-    for (const field of required) {
-
-        if (!metadata[field]) {
-            errors.push(
-                `Metadata missing '${field}'`
-            );
-        }
-    }
 }
 
 function validateUniqueIds(

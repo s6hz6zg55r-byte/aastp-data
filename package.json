@@ -6,7 +6,9 @@
   "scripts": {
     "validate:formulas-schema": "node validators/validateFormulasSchema.js",
     "validate:distance-rules-schema": "node validators/validateDistanceRulesSchema.js",
-    "validate:es-types-schema": "node validators/validateEsTypesSchema.js"
+    "validate:es-types-schema": "node validators/validateEsTypesSchema.js",
+    "validate:pes-types-schema": "node validators/validatePesTypesSchema.js",
+    "validate:interaction-rules-schema": "node validators/validateInteractionRulesSchema.js"
   },
   "keywords": [],
   "author": "",

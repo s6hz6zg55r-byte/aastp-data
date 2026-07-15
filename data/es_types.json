@@ -9,8 +9,8 @@
         "source": {
             "standard": "AASTP-1",
             "edition": "Edition D Version 1",
-            "chapter": "Chapter 1",
-            "dataType": "Structures",
+            "chapter": "Part 1, Chapter 3",
+            "para": "Section 1",
             "lastUpdated": "2026-07-13"
         }
     },
@@ -32,7 +32,7 @@
             "notes": "",
             "source": {
                 "document": "AASTP-1",
-                "note": "Para 1.3.5.2"
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -50,7 +50,7 @@
             "notes": "",
             "source": {
                 "document": "AASTP-1",
-                "note": "Para 1.3.5.2"
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -68,7 +68,7 @@
             "notes": "",
             "source": {
                 "document": "AASTP-1",
-                "note": "Para 1.3.5.2"
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -86,7 +86,7 @@
             "notes": "",
             "source": {
                 "document": "AASTP-1",
-                "note": "Para 1.3.5.2"
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -104,7 +104,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": "Para 1.3.5.2"
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -122,7 +122,7 @@
             "notes": "",
             "source": {
                 "document": "AASTP-1",
-                "note": "Para 1.3.5.2"
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -140,7 +140,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -158,7 +158,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -176,7 +176,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 2, Magazine Design"
             }
         },
         {
@@ -194,7 +194,7 @@
             "notes": "",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, Annex 1-A"
             }
         },
         {
@@ -212,7 +212,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, Annex 1-A"
             }
         },
         {
@@ -230,7 +230,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, para 1.3.1.13"
             }
         },
         {
@@ -248,7 +248,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, para 1.3.1.13"
             }
         },
         {
@@ -266,13 +266,13 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, para 1.3.1.13"
             }
         },
         {
             "id": "ES008A",
-            "code": "ROAD-LOW",
-            "name": "Low Density Thoroughfare",
+            "code": "PTR-LOW",
+            "name": "Low Density Public Traffic Route",
             "structure":"STR006",
             "construction": null,
             "exposure": {
@@ -282,13 +282,13 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, para 1.3.1.15"
             }
         },
         {
             "id": "ES008B",
-            "code": "ROAD-MED",
-            "name": "Medium Density Thoroughfare",
+            "code": "PTR-MED",
+            "name": "Medium Density Public Traffic Route",
             "structure":"STR006",
             "construction":null,
             "exposure": {
@@ -298,13 +298,13 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, para 1.3.1.15"
             }
         },
        {
             "id": "ES008C",
-            "code": "ROAD-HIGH",
-            "name": "High Density Thoroughfare",
+            "code": "PTR-HIGH",
+            "name": "High Density Public Traffic Route",
             "structure": "STR006",
             "construction": null,
             "exposure": {
@@ -314,7 +314,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, para 1.3.1.15"
             }
         },
        {
@@ -327,7 +327,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Part 1, para 1.3.1.16"
             }
         },
        {
@@ -340,7 +340,7 @@
             "notes":"",
             "source": {
                 "document": "AASTP-1",
-                "note": "Para 1.3.1.15"
+                "note": "Part 1, para 1.3.1.15"
             }
         },
        {
@@ -356,7 +356,7 @@
             "notes":"Office, non-explosive workshop or canteen with less than 20 explosive support personnel.",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Annex 1-A"
             }
         },
        {
@@ -372,23 +372,23 @@
             "notes":"Office, non-explosive workshop or canteen with 20 or more explosive support personnel.",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Anenx 1-A"
             }
         },
         {
             "id": "ES012A",
-            "code": "OPG-HIGH",
-            "name": "Overhead Power Grid - Critical",
+            "code": "OPG-LOW",
+            "name": "Overhead Power Grid - Minor",
             "structure": "STR010",
             "construction":null,
             "exposure": {
                 "category": "criticality",
-                "level": "high"
+                "level": "low"
             },
             "notes":"Supergrid network and associated substations.",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Annex 1-A, entries 27a-27c"
             }
         },
         {
@@ -404,23 +404,23 @@
             "notes": "Normal network and associated substations.",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Annex 1-A, entries 27a-27c"
             }
         },
         {
             "id": "ES012C",
-            "code": "OPG-LOW",
-            "name": "Overhead Power Grid - Minor",
+            "code": "OPG-HIGH",
+            "name": "Overhead Power Grid - Critical",
             "structure": "STR010",
             "construction":null,
             "exposure": {
                 "category": "criticality",
-                "level": "low"
+                "level": "high"
             },
             "notes": "Minor network and associated substations.",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Annex 1-A, entries 27a-27c"
             }
         },
         {
@@ -438,32 +438,11 @@
             "notes": "Protected or underground",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Chapter 4"
             }
         },
         {
             "id": "ES013B",
-            "code": "POL-VITAL",
-            "name": "POL Facilities inc Pipelines - Critical Unprotected",
-            "structure": "STR011",
-            "construction":{
-                "protectionLevel":null,
-                "headwall":null,
-                "barricaded":null,
-                "roofType": "Light"
-            },
-            "exposure": {
-                "category": "criticality",
-                "level": "high"
-            },
-            "notes": "Unprotected, aboveground and vital",
-            "source": {
-                "document": "AASTP-1",
-                "note": ""
-            }
-        },
-        {
-            "id": "ES013C",
             "code": "POL",
             "name": "POL Facilities inc Pipelines - Unprotected",
             "structure": "STR011",
@@ -480,7 +459,28 @@
             "notes": "Unprotected, aboveground and non-vital",
             "source": {
                 "document": "AASTP-1",
-                "note": ""
+                "note": "Chapter 4"
+            }
+        },
+        {
+            "id": "ES013C",
+            "code": "POL-VITAL",
+            "name": "POL Facilities inc Pipelines - Critical Unprotected",
+            "structure": "STR011",
+            "construction":{
+                "protectionLevel":null,
+                "headwall":null,
+                "barricaded":null,
+                "roofType": "Light"
+            },
+            "exposure": {
+                "category": "criticality",
+                "level": "high"
+            },
+            "notes": "Unprotected, aboveground and vital",
+            "source": {
+                "document": "AASTP-1",
+                "note": "Chapter 4"
             }
         }
     ]
