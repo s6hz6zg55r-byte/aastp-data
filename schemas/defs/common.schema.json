@@ -212,6 +212,38 @@
         "additionalProperties": false
     },
 
+    "supportedProperties": {
+        "type": "object",
+        "required": [
+            "proectionLevel",
+            "headwall",
+            "barricaded",
+            "roofType",
+            "aperture"
+        ],
+        "properties": {
+            "protectionLevel": {"type":"boolean"},
+            "headwall": {"type":"boolean"},
+            "barricaded": {"type":"boolean"},
+            "roofType": {"type":"boolean"},
+            "aperture": {"type":"boolean"}
+        },
+        "additionalProperties": false
+    },
+
+    "supportedExposure": {
+        "type": "object",
+        "required": [
+            "category",
+            "level"
+        ],
+        "properties": {
+            "category": {"type":"boolean"},
+            "level": {"type":"boolean"}
+        },
+        "additionalProperties": false
+    },
+
     "genericId": {
       "type": "string",
       "minLength": 1
