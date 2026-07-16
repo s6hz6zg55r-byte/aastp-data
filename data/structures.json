@@ -1,166 +1,177 @@
 {
-  "schemaVersion": "1.0.0",
+    "schemaVersion": "1.0.0",
 
-  "metadata": {
-        "dataset": "structures",
-        "title": "Structures",
-        "description": "This dataset contains definitions for various structure types and their properties.",
-        "version": "0.5.0",
-        "source": {
-            "standard": "AASTP-1",
-            "edition": "Edition D Version 1",
-            "chapter": "Part 1, Chapter 1",
-            "para": "",
-            "lastUpdated": "2026-07-13"
-        }
+    "metadata": {
+      "dataset": "structures",
+      "title": "Structures",
+      "description": "This dataset contains definitions for various structure types and their properties.",
+      "version": "0.5.0",
+      "source": {
+          "standard": "AASTP-1",
+          "edition": "Edition D Version 1",
+          "chapter": "Part 1, Chapter 1",
+          "para": "",
+          "lastUpdated": "2026-07-13"
+      }
     },
 
-  "structures": [
-    {
-      "id": "STR001",
-      "code": "ECM",
-      "name": "Earth Covered Magazine",
-      "category": "explosives_facility",
-      "supportedProperties": {
-        "protectionLevel": true,
-        "headwall": true,
-        "barricaded": true,
-        "roofType": false,
-        "aperture": false
+    "structures": [
+      {
+        "id": "STR001",
+        "code": "ECM",
+        "name": "Earth Covered Magazine",
+        "category": "explosives_facility",
+        "supportedProperties": {
+          "protectionLevel": true,
+          "headwall": true,
+          "barricaded": true,
+          "roofType": false,
+          "aperture": false
+        },
+        "supportedExposure": false,
+        "orientationType": "OR001"
       },
-      "supportedExposure": false
-    },
 
-    {
-      "id": "STR002",
-      "code": "HWM",
-      "name": "Heavy Walled Magazine",
-      "category": "explosives_facility",
-      "supportedProperties": {
-        "protectionLevel": false,
-        "headwall": false,
-        "barricaded": false,
-        "roofType": true,
-        "aperture": true
+      {
+        "id": "STR002",
+        "code": "HWM",
+        "name": "Heavy Walled Magazine",
+        "category": "explosives_facility",
+        "supportedProperties": {
+          "protectionLevel": false,
+          "headwall": false,
+          "barricaded": false,
+          "roofType": true,
+          "aperture": true
+        },
+        "supportedExposure": false,
+        "orientationType": "OR002"
       },
-      "supportedExposure": false
-    },
 
-    {
-      "id": "STR003",
-      "code": "MWM",
-      "name": "Medium Walled Magazine",
-      "category": "explosives_facility",
-      "supportedProperties": {
-        "protectionLevel": false,
-        "headwall": false,
-        "barricaded": true,
-        "roofType": false,
-        "aperture": false
+      {
+        "id": "STR003",
+        "code": "MWM",
+        "name": "Medium Walled Magazine",
+        "category": "explosives_facility",
+        "supportedProperties": {
+          "protectionLevel": false,
+          "headwall": false,
+          "barricaded": true,
+          "roofType": false,
+          "aperture": false
+        },
+        "supportedExposure": false,
+        "orientationType": "OR002"
       },
-      "supportedExposure": false
-    },
     
-    {
-      "id": "STR004",
-      "code": "OS",
-      "name": "Open Stack",
-      "category": "explosives_facility",
-      "supportedProperties": {
-        "protectionLevel": false,
-        "headwall": false,
-        "barricaded": true,
-        "roofType": false,
-        "aperture": false
+      {
+        "id": "STR004",
+        "code": "OS",
+        "name": "Open Stack",
+        "category": "explosives_facility",
+        "supportedProperties": {
+          "protectionLevel": false,
+          "headwall": false,
+          "barricaded": true,
+          "roofType": false,
+          "aperture": false
+        },
+        "supportedExposure": false,
+        "orientationType": "OR002"
       },
-      "supportedExposure": false
-    },
 
-    {
-      "id": "STR005",
-      "code": "EW",
-      "name": "Explosives Workshop",
-      "category": "personnel_facility",
-      "supportedProperties": {
-        "protectionLevel": false,
-        "headwall": false,
-        "barricaded": true,
-        "roofType": true,
-        "aperture": false
+      {
+        "id": "STR005",
+        "code": "EW",
+        "name": "Explosives Workshop",
+        "category": "personnel_facility",
+        "supportedProperties": {
+          "protectionLevel": false,
+          "headwall": false,
+          "barricaded": true,
+          "roofType": true,
+          "aperture": false
+        },
+        "supportedExposure": false,
+        "orientationType": "OR002"
       },
-      "supportedExposure": false
-    },
     
-    {
-      "id": "STR006",
-      "code": "ROAD",
-      "name": "Road, Railway, Waterway or Public Right of Way",
-      "category": "transport_route",
-      "supportedProperties": false,
-      "supportedExposure": {
-        "category": true,
-        "level": true
-      }
-    },
-
-    {
-      "id": "STR007",
-      "code": "IB",
-      "name": "Inhabited Building",
-      "category": "personnel_facility",
-      "supportedProperties": false,
-      "supportedExposure": false
-    },
-
-    {
-      "id": "STR008",
-      "code": "VC",
-      "name": "Vulnerable Construction",
-      "category": "vulnerable_structure",
-      "supportedProperties": false,
-      "supportedExposure": false
-    },
-
-    {
-      "id": "STR009",
-      "code": "SPT",
-      "name": "Support Staff Office",
-      "category": "personnel_facility",
-      "supportedProperties": false,
-      "supportedExposure": {
-        "category": true,
-        "level": true
-      }
-    },
-
-    {
-      "id": "STR010",
-      "code": "OPG",
-      "name": "Overhead Power Grid",
-      "category": "utility",
-      "supportedProperties": false,
-      "supportedExposure": {
-        "category": true,
-        "level": true
-      }
-    },
-
-    {
-      "id": "STR011",
-      "code": "POL",
-      "name": "POL Facilities inc. Pipelines",
-      "category": "infrastructure",
-      "supportedProperties": {
-        "protectionLevel": false,
-        "headwall": false,
-        "barricaded": false,
-        "roofType": true,
-        "aperture": false
+      {
+        "id": "STR006",
+        "code": "PTR",
+        "name": "Public Traffic Route",
+        "category": "transport_route",
+        "supportedProperties": false,
+        "supportedExposure": {
+          "category": true,
+          "level": true
+        },
+        "orientationType": "OR002"
       },
-      "supportedExposure": {
-        "category": true,
-        "level": true
+
+      {
+        "id": "STR007",
+        "code": "IB",
+        "name": "Inhabited Building",
+        "category": "personnel_facility",
+        "supportedProperties": false,
+        "supportedExposure": false,
+        "orientationType": "OR002"
+      },
+
+      {
+        "id": "STR008",
+        "code": "VC",
+        "name": "Vulnerable Construction",
+        "category": "vulnerable_structure",
+        "supportedProperties": false,
+        "supportedExposure": false,
+        "orientationType": "OR002"
+      },
+
+      {
+        "id": "STR009",
+        "code": "SPT",
+        "name": "Support Staff Office",
+        "category": "personnel_facility",
+        "supportedProperties": false,
+        "supportedExposure": {
+          "category": true,
+          "level": true
+        },
+        "orientationType": "OR002"
+      },
+
+      {
+        "id": "STR010",
+        "code": "OPG",
+        "name": "Overhead Power Grid",
+        "category": "utility",
+        "supportedProperties": false,
+        "supportedExposure": {
+          "category": true,
+          "level": true
+        },
+        "orientationType": "OR002"
+      },
+
+      {
+        "id": "STR011",
+        "code": "POL",
+        "name": "POL Facilities inc. Pipelines",
+        "category": "infrastructure",
+        "supportedProperties": {
+          "protectionLevel": false,
+          "headwall": false,
+          "barricaded": false,
+          "roofType": true,
+          "aperture": false
+        },
+        "supportedExposure": {
+          "category": true,
+          "level": true
+        },
+        "orientationType": "OR002"
       }
-    }
-  ]
+    ]
 }
