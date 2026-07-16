@@ -42,3 +42,8 @@ validateHazardCategories.js
 validateEffects.js
 validateInteractions.js
 That keeps the validators focused on domain logic rather than repeating structural checks already enforced by AJV. It also means that when you change metadata again in the future, you only update one schema definition instead of five or six validators.
+
+The next thre validatiors I'm working on are the 
+ - validateInteractionCoverage.js
+ - validateRepositoryUsage.js
+ - validateRepositoryCompleteness.js
