@@ -215,7 +215,7 @@
     "supportedProperties": {
         "type": "object",
         "required": [
-            "proectionLevel",
+            "protectionLevel",
             "headwall",
             "barricaded",
             "roofType",

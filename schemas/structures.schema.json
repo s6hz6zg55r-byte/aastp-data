@@ -1,0 +1,92 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+    "$id": "https://aastp.org/schemas/structures.schema.json",
+
+    "title": "AASTP Structures",
+
+    "type": "object",
+
+    "required": [
+        "schemaVersion",
+        "metadata",
+        "structures"
+    ],
+
+    "properties": {
+
+        "schemaVersion": {
+            "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/schemaVersion"
+        },
+
+        "metadata": {
+            "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/metadata"
+        },
+
+        "structures": {
+
+            "type": "array",
+
+            "items": {
+
+                "type": "object",
+
+                "required": [
+                    "id",
+                    "code",
+                    "name",
+                    "category",
+                    "supportedProperties",
+                    "supportedExposure",
+                    "orientationType"
+                ],
+
+                "properties": {
+
+                    "id": {
+                        "$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/structureId"
+                    },
+
+                    "code": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+
+                    "name": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+
+                    "category": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+
+                    "supportedProperties": {
+                        "oneOf": [
+                            {"const": false},
+                            {"$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/supportedProperties"}
+                        ]
+                    },
+ 
+                    "supportedExposure": {
+                        "oneOf": [
+                            {"const": false},
+                            {"$ref": "https://aastp.org/schemas/defs/common.schema.json#/$defs/supportedExposure"}
+                        ]
+                    },
+
+                    "orientationType": {
+                        "type": "string",
+                        "pattern": "^OR[0-9]{3}$"
+                    }
+              
+                },
+
+                "additionalProperties": false
+            }
+        }
+    },
+
+    "additionalProperties": false
+}
