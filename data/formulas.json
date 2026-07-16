@@ -86,6 +86,25 @@
         "output": "distance"
       },
       "forwardExpression": "distance"
+    },
+    {
+      "id": "FORM005",
+      "code": "EXPRESSION",
+      "name": "Expression Formula",
+      "description": "Used where The expression is detailed in the distance_rules.json.",
+      "solvable": true,
+      "units": {
+        "input": "kg",
+        "output": "m"
+      },
+      "parameters": {
+        "input": "",
+        "output": ""
+      },
+      "forwardExpression": "",
+      "reverseExpression": ""
     }
+
+
   ]
 }
