@@ -1,0 +1,36 @@
+{
+    "schemaVersion": "1.0.0",
+
+    "metadata": {
+        "dataset": "interaction_dimensions",
+        "title": "Interaction Dimensions",
+        "description": "This dataset defines potential PES and ES interaction dimensions.",
+        "version": "0.5.0",
+        "source": {
+            "standard": "AASTP-1",
+            "edition": "Edition D Version 1",
+            "chapter": "Chapter 1",
+            "para": "",
+            "lastUpdated": "2026-07-15"
+        }
+    },
+  
+  
+    "orientationTypes": {
+        "OR001": {
+            "name": "Directional",
+            "values": [
+                "front",
+                "side",
+                "rear"
+            ]
+        },
+
+        "OR002": {
+            "name": "NonDirectional",
+            "values": [
+                "all"
+            ]
+        }
+    }
+}
