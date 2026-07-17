@@ -1952,7 +1952,735 @@
         "transformations": [
             "round_up_metre"
         ]
+    },
+
+    {
+        "id": "DFD01",
+        "name":"Debris and Fragment Distance 1",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "traceability": {
+            "Part": "1",
+            "Section": "II",
+            "Table": "6",
+            "Row": "DFD1"
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"DFD01_A",
+                    "sequence":1,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":31000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 41,
+                            "lte": 360
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "41 * pow(q ,0.21)",
+                        "quantityFromDistance": "pow(d/41,1/0.21)"
+                    }
+                },
+                {
+                    "id":"DFD01_B",
+                    "sequence":2,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":31000,
+                            "lte":100400
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 360,
+                            "lte":839
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "0.21 * pow(q,0.72)",
+                        "quantityFromDistance": "pow(d/0.21,1/0.72)"
+                    }
+                },
+                {
+                    "id":"DFD01_C",
+                    "sequence":3,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":100400,
+                            "lte":500000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 839,
+                            "lte": 979
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "87.261 * ln(q) - 166.56",
+                        "quantityFromDistance": "exp((d+166.56) / 87.261)"
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    {
+        "id": "DFD02",
+        "name":"Debris and Fragment Distance 2",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "traceability": {
+            "Part": "1",
+            "Section": "II",
+            "Table": "6",
+            "Row": "DFD2"
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"DFD02_A",
+                    "sequence":1,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":23
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 94,
+                            "lte": 152
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "91 + 2.687*q",
+                        "quantityFromDistance": "(d-91) / 2.687"
+                    }
+                },
+                {
+                    "id":"DFD02_B",
+                    "sequence":2,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":23,
+                            "lte":350
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 152,
+                            "lte":338
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "64.995 + 7.249 * (ln(q)) + 6.693 * pow(ln(q),2)",
+                        "quantityFromDistance": "exp(-7.249 / 13.386 + sqrt(pow(7.249/13.386,2) - ((64.995-d)/6.693)))"
+                    }
+                },
+                {
+                    "id":"DFD02_C",
+                    "sequence":3,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":350,
+                            "lte":73571
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 338,
+                            "lte": 931
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "0.0081 * q + 334.3",
+                        "quantityFromDistance": "(d - 334.3) / 0.0081"
+                    }
+                },
+                {
+                    "id":"DFD02_D",
+                    "sequence":4,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":73571,
+                            "lte":100400
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 931,
+                            "lte": 1032
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "22.2 * pow(q,1/3)",
+                        "quantityFromDistance": "pow(d/22.2,3)"
+                    }
+                },
+                {
+                    "id":"DFD02_E",
+                    "sequence":5,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":100400,
+                            "lte":500000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 1032,
+                            "lte": 1205
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "107.386 * ln(q) - 204.97",
+                        "quantityFromDistance": "exp((d + 204.97)/107.386)"
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    {
+        "id": "DFD03",
+        "name":"Debris and Fragment Distance 3",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "traceability": {
+            "Part": "1",
+            "Section": "II",
+            "Table": "6",
+            "Row": "DFD3"
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"DFD03_A",
+                    "sequence":1,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":14
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 61,
+                            "lte": 61
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "61",
+                        "quantityFromDistance": "14"
+                    }
+                },
+                {
+                    "id":"DFD03_B",
+                    "sequence":2,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":14,
+                            "lte":500000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 61,
+                            "lte": 979
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "87.261 * ln(q) - 166.56",
+                        "quantityFromDistance": "exp((d+166.56) / 87.261)"
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    {
+        "id": "DFD04",
+        "name":"Debris and Fragment Distance 4",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "traceability": {
+            "Part": "1",
+            "Section": "II",
+            "Table": "6",
+            "Row": "DFD4"
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"DFD04_A",
+                    "sequence":1,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":5
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 65,
+                            "lt": 94
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "64.995 + 7.249 * (ln(q)) + 6.693 * pow(ln(q),2)",
+                        "quantityFromDistance": "exp(-7.249 / 13.386 + sqrt(pow(7.249/13.386,2) - ((64.995-d)/6.693)))"
+                    }
+                },
+                {
+                    "id":"DFD04_B",
+                    "sequence":2,
+                    "notes":"This branch doesn't exist in the AASTP but it covers the distance gap for DFD4 ",
+                    "when":{
+                        "neq":{
+                            "gte":5,
+                            "lte":5
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 94,
+                            "lte": 150
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "94",
+                        "quantityFromDistance": "5"
+                    }
+                },
+                {
+                    "id":"DFD04_C",
+                    "sequence":3,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":5,
+                            "lte":223
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 150,
+                            "lt": 450
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "97.493 + 10.874 * (ln(q)) + 10.04 * pow(ln(q),2)",
+                        "quantityFromDistance": "exp(-10.874 / 20.08 + sqrt(pow(10.874/20.08,2) - ((97.493-d)/10.04)))"
+                    }
+                },
+                {
+                    "id":"DFD04_D",
+                    "sequence":4,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":223,
+                            "lte":1170
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 450,
+                            "lte": 450
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "450",
+                        "quantityFromDistance": "1170"
+                    }
+                },
+                {
+                    "id":"DFD04_E",
+                    "sequence":5,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":1170,
+                            "lte":500000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 451,
+                            "lte": 979
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "87.261 * ln(q) - 166.56",
+                        "quantityFromDistance": "exp((d+166.56) / 87.261)"
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    {
+        "id": "DFD05",
+        "name":"Debris and Fragment Distance 5",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "traceability": {
+            "Part": "1",
+            "Section": "II",
+            "Table": "6",
+            "Row": "DFD5"
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"DFD05_A",
+                    "sequence":1,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":15
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 61,
+                            "lte": 61
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "61",
+                        "quantityFromDistance": "15"
+                    }
+                },
+                {
+                    "id":"DFD05_B",
+                    "sequence":2,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":15,
+                            "lte":13150
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 61,
+                            "lte": 525
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "68 * ln(q) - 121",
+                        "quantityFromDistance": "exp((d + 121) / 68)"
+                    }
+                },
+                {
+                    "id":"DFD05_C",
+                    "sequence":3,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":13150,
+                            "lte":39800
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 525,
+                            "lte": 758
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "22.2 * pow(q,1/3)",
+                        "quantityFromDistance": "pow(d/22.2,3)"
+                    }
+                },
+                {
+                    "id":"DFD05_D",
+                    "sequence":4,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":39800,
+                            "lte":500000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 759,
+                            "lte": 979
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "87.261 * ln(q) - 166.56",
+                        "quantityFromDistance": "exp((d+166.56) / 87.261)"
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    {
+        "id": "DFD06",
+        "name":"Debris and Fragment Distance 6",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "traceability": {
+            "Part": "1",
+            "Section": "II",
+            "Table": "6",
+            "Row": "DFD6"
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"DFD06_A",
+                    "sequence":1,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lte":500000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 121,
+                            "lte": 1041
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "121 * pow(q,0.164)",
+                        "quantityFromDistance": "pow(d/121,1/0.164)"
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
+    },
+    {
+        "id": "DFD07",
+        "name":"Debris and Fragment Distance 7",
+        "applicability":{
+            "minNEQ": 1,
+            "maxNEQ": 500000
+        },
+        "traceability": {
+            "Part": "1",
+            "Section": "II",
+            "Table": "6",
+            "Row": "DFD7"
+        },
+        "calculation":{
+            "type":"conditional",
+            "branches":[
+                {
+                    "id":"DFD07_A",
+                    "sequence":1,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":1,
+                            "lt":10
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 61,
+                            "lte": 61
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "61",
+                        "quantityFromDistance": "10"
+                    }
+                },
+                {
+                    "id":"DFD07_B",
+                    "sequence":2,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":10,
+                            "lt":400
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 61,
+                            "lte": 100
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "61 + 0.1 * (q - 9)",
+                        "quantityFromDistance": "(D - 60.1) / 0.1"
+                    }
+                },
+                {
+                    "id":"DFD07_C",
+                    "sequence":3,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gte":400,
+                            "lte":3375
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 100,
+                            "lt": 400
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "100 + 5.5 * pow(q-400,0.5)",
+                        "quantityFromDistance": "pow((d-100)/5.5,2) + 400"
+                    }
+                },
+                {
+                    "id":"DFD07_D",
+                    "sequence":4,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":3375,
+                            "lte":5000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gte": 400,
+                            "lte": 400
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "400",
+                        "quantityFromDistance": "5000"
+                    }
+                },
+                {
+                    "id":"DFD07_E",
+                    "sequence":5,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":5000,
+                            "lte":7020
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 400,
+                            "lte": 518
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "(0.058 * q) + 110",
+                        "quantityFromDistance": "(D - 110) / 0.058"
+                    }
+                },
+                {
+                    "id":"DFD07_F",
+                    "sequence":6,
+                    "notes":"Distance for ",
+                    "when":{
+                        "neq":{
+                            "gt":7020,
+                            "lte":500000
+                        }
+                    },
+                    "result":{
+                        "range": {
+                            "gt": 518,
+                            "lte": 1041
+                        }
+                    },
+                    "formula":"FORM005",
+                    "parameters":{
+                        "distanceFromQuantity": "pow(121 * q,0.164)",
+                        "quantityFromDistance": "pow(d / 121,1/0.164)"
+                    }
+                }
+            ]
+        },
+        "transformations": [
+            "round_up_metre"
+        ]
     }
+    
   ]
 }
 
